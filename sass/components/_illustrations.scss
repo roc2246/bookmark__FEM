@@ -1,0 +1,31 @@
+.illustration {
+  display: grid;
+  &__background {
+    grid-column: 1/2;
+    grid-row: 2/6;
+
+    height: 20rem;
+    width: 20rem;
+
+    background-color: map-get($map: $colors-primary, $key: "soft blue");
+  }
+  &--hero > &__background {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+
+  &--selection > &__background {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+  &__img {
+    grid-column: 1/2;
+    grid-row: 1/4;
+  }
+  &--hero > &__img {
+    aspect-ratio: 657/466;
+  }
+  &--selection > &__img {
+    aspect-ratio: 379/245;
+  }
+}
