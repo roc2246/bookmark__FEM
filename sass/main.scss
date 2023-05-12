@@ -1,6 +1,13 @@
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
+@import 'components/buttons';
+@import 'components/illustrations';
+@import 'components/line-breaks';
+@import 'components/anchors';
+
 @import 'layouts/flex';
+@import 'layouts/grid';
+@import 'layouts/navigation';
 
 @import 'vendor/google-fonts';
