@@ -1,0 +1,45 @@
+button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+ul{
+    list-style: none;
+    padding: unset;
+}
+
+a {
+    text-decoration: none;
+    &:hover{
+        color: map-get($map: $colors-primary, $key: "soft red");
+    }
+}
+
+h1, h2, h6{
+    font-weight: map-get($map: $font-weights, $key: "bolder");
+}
+
+h4{
+    font-weight: map-get($map: $font-weights, $key: "bold");
+}
+
+h6{
+    letter-spacing: rem(4px);
+}
+
+p{
+    color: map-get($map: $colors-secondary, $key: "grayish blue");
+    line-height: rem(28px);
+}
+
+input{
+    border: none;
+    border-radius: rem(10px);
+    padding: rem(18px);
+}
+
+::placeholder{
+    color: map-get($map: $colors-secondary, $key: "grayish blue");
+   font-size: rem(16px);
+}
