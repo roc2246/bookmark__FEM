@@ -1,0 +1,22 @@
+$screens: (
+    "mobile": 375px,
+    "desktop": 1440px,
+);
+
+$colors-primary: (
+    "soft blue": hsl(231, 69%, 60%),
+    "soft red": hsl(0, 94%, 66%)
+);
+
+$colors-secondary: (
+    "grayish blue": hsl(229, 8%, 60%),
+    "very dark blue": hsl(229, 31%, 21%)
+);
+
+$font-size: 18px;
+
+$font-family: 'Rubik', sans-serif;
+$font-weights: (
+    "bold": 400,
+    "bolder": 500
+)
