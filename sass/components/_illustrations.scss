@@ -1,26 +1,30 @@
-.illustration {
-  display: grid;
-  &__background {
-    grid-column: 1/2;
-    grid-row: 2/6;
+$border-radius: rem(400px);
 
-    height: 20rem;
-    width: 20rem;
+.illustration {
+  &__background {
+
+    height: rem(201px);
+    width: 13rem;
 
     background-color: map-get($map: $colors-primary, $key: "soft blue");
   }
+  &--hero{
+    // margin-left: auto;
+
+  }
   &--hero > &__background {
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    margin-left: auto;
+
   }
 
   &--selection > &__background {
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
   }
   &__img {
-    grid-column: 1/2;
-    grid-row: 1/4;
+    width: rem(307px);
   }
   &--hero > &__img {
     aspect-ratio: 657/466;
