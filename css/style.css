@@ -64,11 +64,20 @@ input {
   aspect-ratio: 379/245;
   width: max(17.22222rem, 37vw); }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2.27778rem max(1.72222rem, 6vw) 2.27778rem max(1.72222rem, 12vw); }
+
 .hero {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
   justify-content: flex-end; }
+
+.nav--top > .nav__links {
+  display: none; }
 
 .illustration {
   display: grid; }
