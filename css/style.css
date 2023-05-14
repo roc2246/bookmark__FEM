@@ -44,7 +44,7 @@ input {
 
 .illustration__background {
   height: 11.16667rem;
-  width: 13rem;
+  width: 100%;
   background-color: #5368df; }
 
 .illustration--hero > .illustration__background {
@@ -56,11 +56,10 @@ input {
   border-top-right-radius: 22.22222rem;
   border-bottom-right-radius: 22.22222rem; }
 
-.illustration__img {
-  width: 17.05556rem; }
-
 .illustration--hero > .illustration__img {
-  aspect-ratio: 657/466; }
+  aspect-ratio: 657/466;
+  width: 18.88889rem;
+  margin-left: -1rem; }
 
 .illustration--selection > .illustration__img {
   aspect-ratio: 379/245; }
@@ -72,11 +71,13 @@ input {
   justify-content: flex-end; }
 
 .illustration {
-  display: grid;
-  grid-template-rows: 2.83333rem 8.55556rem 2.55556rem; }
-  .illustration__background {
-    grid-column: 1/2;
+  display: grid; }
+  .illustration--hero {
+    grid-template-columns: 2.94444rem 13.88889rem 1.72222rem;
+    grid-template-rows: 2.83333rem 8.55556rem 2.55556rem; }
+  .illustration--hero > .illustration__background {
+    grid-column: 2/4;
     grid-row: 2/3; }
-  .illustration__img {
-    grid-column: 1/2;
+  .illustration--hero > .illustration__img {
+    grid-column: 1/3;
     grid-row: 1/2; }

@@ -4,13 +4,9 @@ $border-radius: rem(400px);
   &__background {
 
     height: rem(201px);
-    width: 13rem;
+    width: 100%;
 
     background-color: map-get($map: $colors-primary, $key: "soft blue");
-  }
-  &--hero{
-    // margin-left: auto;
-
   }
   &--hero > &__background {
     border-top-left-radius: $border-radius;
@@ -23,11 +19,10 @@ $border-radius: rem(400px);
     border-top-right-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
   }
-  &__img {
-    width: rem(307px);
-  }
   &--hero > &__img {
     aspect-ratio: 657/466;
+    width: rem(340px);
+    margin-left: -1rem;
   }
   &--selection > &__img {
     aspect-ratio: 379/245;

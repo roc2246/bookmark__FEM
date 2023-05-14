@@ -1,13 +1,17 @@
-.illustration{
+.illustration {
   display: grid;
-  grid-template-rows: rem(51px) rem(154px) rem(46px);
+  &--hero {
+    grid-template-columns: rem(53px) rem(250px) rem(31px);
+    grid-template-rows: rem(51px) rem(154px) rem(46px);
+  }
 
-  &__background{
-    grid-column: 1/2;
+  &--hero > &__background {
+    grid-column: 2/4;
     grid-row: 2/3;
   }
-    &__img {
-    grid-column: 1/2;
+
+  &--hero > &__img {
+    grid-column: 1/3;
     grid-row: 1/2;
   }
 }
