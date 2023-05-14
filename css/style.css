@@ -54,7 +54,7 @@ input {
 
 .illustration--hero > .illustration__img {
   aspect-ratio: 657/466;
-  width: 18.88889rem;
+  width: 113%;
   margin-left: -1rem; }
 
 .illustration--selection > .illustration__background {
@@ -63,7 +63,7 @@ input {
 
 .illustration--selection > .illustration__img {
   aspect-ratio: 379/245;
-  width: 17.22222rem; }
+  width: 100%; }
 
 .hero {
   display: flex;

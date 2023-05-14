@@ -17,7 +17,7 @@ $border-radius: rem(400px);
   }
   &--hero > &__img {
     aspect-ratio: 657/466;
-    width: rem(340px);
+    width: 113%;
     margin-left: -1rem;
   }
   
@@ -27,6 +27,6 @@ $border-radius: rem(400px);
   }
   &--selection > &__img {
     aspect-ratio: 379/245;
-    width: rem(310px);
+    width: 100%;
   }
 }
