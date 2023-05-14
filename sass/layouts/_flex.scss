@@ -1,21 +1,26 @@
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-
-.hero{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-    justify-content: flex-end;
+.hero {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
 }
 
-.selection{
+.nav {
+  &__link {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.selection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }

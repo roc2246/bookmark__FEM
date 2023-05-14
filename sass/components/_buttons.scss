@@ -1,0 +1,29 @@
+.btn {
+  color: white;
+  font-weight: 600;
+  font-size: 0.75rem;
+
+  letter-spacing: rem(2px);
+  padding: rem(15px);
+  border-radius: rem(5px);
+
+  &:hover {
+    background-color: white;
+    outline: rem(2px) solid;
+
+  }
+  &--red {
+    background-color: map-get($map: $colors-primary, $key: "soft red");
+    &:hover {
+      border-color: map-get($map: $colors-primary, $key: "soft red");
+      color: map-get($map: $colors-primary, $key: "soft red");
+    }
+  }
+}
+
+.nav {
+  &__btn {
+    padding-left: rem(33px);
+    padding-right: rem(33px);
+  }
+}

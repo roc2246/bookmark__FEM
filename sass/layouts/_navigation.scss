@@ -1,23 +1,35 @@
-.nav{
+$min-width: 675px;
 
-    &__toggle{
-        height: rem(25px);
-        padding: rem(6px) 0;
+.nav {
+  &__toggle {
+    height: rem(25px);
+    padding: rem(6px) 0;
+  }
+
+
+  @media (min-width: $min-width) {
+    &__toggle {
+      display: none;
     }
+  }
 
-    &__close, &__open{
-        width: rem(18px);
-        height: rem(14px);
+  &__close,
+  &__open {
+    width: rem(18px);
+    height: rem(14px);
+  }
 
+  &__close {
+    display: none;
+  }
+
+  &--top > &__links {
+    display: none;
+  }
+  @media (min-width: $min-width) {
+    &--top > &__links {
+      display: flex;
+      gap: rem(46px);
     }
-    
-    &__close{
-        display: none;
-    }
-
-
-
-    &--top > &__links{
-        display: none;
-    }
+  }
 }
