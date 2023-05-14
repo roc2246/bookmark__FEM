@@ -15,8 +15,8 @@
   }
 
   &--selection {
-    grid-template-columns: #{"max(#{rem(31px)}, 12vw)"} rem(275px) rem(35px);
-    grid-template-rows: rem(34px) rem(165px) rem(36px);
+    grid-template-columns: #{"max(#{rem(31px)}, 12vw)"} #{"max(#{rem(275px)}, 32vw)"} auto;
+    grid-template-rows: #{"max(#{rem(34px)}, 5.5vw)"} #{"max(#{rem(165px)}, 18vw)"} #{"max(#{rem(33px)}, 5.9vw)"};
   }
   &--selection > &__background {
     grid-column: 1/3;

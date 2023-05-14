@@ -26,6 +26,7 @@ $border-radius: rem(400px);
   }
   &--selection > &__img {
     aspect-ratio: 379/245;
-    width: 100%;
+    width: #{"max(#{rem(310px)}, 37vw)"};
+
   }
 }

@@ -1,6 +1,6 @@
 .hero{
     display: flex;
-    flex: row;
+    flex-direction: row;
     flex-wrap: wrap-reverse;
     justify-content: flex-end;
 }

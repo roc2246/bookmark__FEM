@@ -62,11 +62,11 @@ input {
 
 .illustration--selection > .illustration__img {
   aspect-ratio: 379/245;
-  width: 100%; }
+  width: max(17.22222rem, 37vw); }
 
 .hero {
   display: flex;
-  flex: row;
+  flex-direction: row;
   flex-wrap: wrap-reverse;
   justify-content: flex-end; }
 
@@ -82,8 +82,8 @@ input {
     grid-column: 1/3;
     grid-row: 1/2; }
   .illustration--selection {
-    grid-template-columns: max(1.72222rem, 12vw) 15.27778rem 1.94444rem;
-    grid-template-rows: 1.88889rem 9.16667rem 2rem; }
+    grid-template-columns: max(1.72222rem, 12vw) max(15.27778rem, 32vw) auto;
+    grid-template-rows: max(1.88889rem, 5.5vw) max(9.16667rem, 18vw) max(1.83333rem, 5.9vw); }
   .illustration--selection > .illustration__background {
     grid-column: 1/3;
     grid-row: 2/3; }
