@@ -54,7 +54,8 @@ input {
 
 .illustration--hero > .illustration__img {
   aspect-ratio: 580/386;
-  width: max(17.22222rem, 40vw); }
+  width: max(17.22222rem, 40vw);
+  margin-left: auto; }
 
 .illustration--selection > .illustration__background {
   border-top-right-radius: 22.22222rem;
@@ -76,13 +77,16 @@ header {
   flex-wrap: wrap-reverse;
   justify-content: flex-end; }
 
-.nav--top > .nav__links {
-  display: none; }
+.selection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
 
 .illustration {
   display: grid; }
   .illustration--hero {
-    grid-template-columns: max(1.94444rem, 11vw) max(15.27778rem, 29vw) max(1.72222rem, 6vw);
+    grid-template-columns: auto max(15.27778rem, 29vw) max(1.72222rem, 6vw);
     grid-template-rows: max(2.83333rem, 9vw) max(8.55556rem, 17vw) max(2.55556rem, 6.8vw); }
   .illustration--hero > .illustration__background {
     grid-column: 2/4;
@@ -99,3 +103,6 @@ header {
   .illustration--selection > .illustration__img {
     grid-column: 2/4;
     grid-row: 1/2; }
+
+.nav--top > .nav__links {
+  display: none; }

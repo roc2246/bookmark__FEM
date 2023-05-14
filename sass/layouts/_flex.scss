@@ -6,6 +6,7 @@ header{
     margin: rem(41px) #{"max(#{rem(31px)}, 6vw)"} rem(41px)  #{"max(#{rem(31px)}, 12vw)"};
 }
 
+
 .hero{
     display: flex;
     flex-direction: row;
@@ -13,8 +14,9 @@ header{
     justify-content: flex-end;
 }
 
-.nav{
-    &--top > &__links{
-        display: none;
-    }
+.selection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
