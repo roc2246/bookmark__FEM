@@ -17,7 +17,7 @@ $border-radius: rem(400px);
   }
   &--hero > &__img {
     aspect-ratio: 657/466;
-    width: 113%;
+    width: #{"max(#{rem(340px)}, 43vw)"};
     margin-left: -1rem;
   }
   
