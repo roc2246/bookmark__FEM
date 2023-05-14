@@ -3,7 +3,7 @@ $border-radius: rem(400px);
 .illustration {
   &__background {
 
-    height: rem(201px);
+    height: #{"max(#{rem(201px)}, 23.75vw)"};
     width: 100%;
 
     background-color: map-get($map: $colors-primary, $key: "soft blue");

@@ -2,8 +2,8 @@
   display: grid;
 
   &--hero {
-    grid-template-columns: rem(53px) rem(250px) rem(31px);
-    grid-template-rows: rem(51px) rem(154px) rem(46px);
+    grid-template-columns: #{"max(#{rem(53px)}, 11vw)"} #{"max(#{rem(250px)}, 29vw)"} #{"max(#{rem(31px)}, 6vw)"};
+    grid-template-rows: #{"max(#{rem(51px)}, 9vw)"} #{"max(#{rem(154px)}, 17vw)"} #{"max(#{rem(46px)}, 6.8vw)"};
   }
   &--hero > &__background {
     grid-column: 2/4;
@@ -15,7 +15,7 @@
   }
 
   &--selection {
-    grid-template-columns: rem(31px) rem(275px) rem(35px);
+    grid-template-columns: #{"max(#{rem(31px)}, 12vw)"} rem(275px) rem(35px);
     grid-template-rows: rem(34px) rem(165px) rem(36px);
   }
   &--selection > &__background {
