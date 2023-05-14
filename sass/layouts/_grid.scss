@@ -2,7 +2,7 @@
   display: grid;
 
   &--hero {
-    grid-template-columns: #{"max(#{rem(53px)}, 11vw)"} #{"max(#{rem(250px)}, 29vw)"} #{"max(#{rem(31px)}, 6vw)"};
+    grid-template-columns: #{"max(#{rem(35px)}, 11vw)"} #{"max(#{rem(275px)}, 29vw)"} #{"max(#{rem(31px)}, 6vw)"};
     grid-template-rows: #{"max(#{rem(51px)}, 9vw)"} #{"max(#{rem(154px)}, 17vw)"} #{"max(#{rem(46px)}, 6.8vw)"};
   }
   &--hero > &__background {

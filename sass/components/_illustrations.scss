@@ -16,9 +16,8 @@ $border-radius: rem(400px);
 
   }
   &--hero > &__img {
-    aspect-ratio: 657/466;
-    width: #{"max(#{rem(340px)}, 43vw)"};
-    margin-left: -1rem;
+    aspect-ratio: 580/386;
+    width: #{"max(#{rem(310px)}, 40vw)"};
   }
   
   &--selection > &__background {

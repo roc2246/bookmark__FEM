@@ -53,9 +53,8 @@ input {
   margin-left: auto; }
 
 .illustration--hero > .illustration__img {
-  aspect-ratio: 657/466;
-  width: max(18.88889rem, 43vw);
-  margin-left: -1rem; }
+  aspect-ratio: 580/386;
+  width: max(17.22222rem, 40vw); }
 
 .illustration--selection > .illustration__background {
   border-top-right-radius: 22.22222rem;
@@ -74,7 +73,7 @@ input {
 .illustration {
   display: grid; }
   .illustration--hero {
-    grid-template-columns: max(2.94444rem, 11vw) max(13.88889rem, 29vw) max(1.72222rem, 6vw);
+    grid-template-columns: max(1.94444rem, 11vw) max(15.27778rem, 29vw) max(1.72222rem, 6vw);
     grid-template-rows: max(2.83333rem, 9vw) max(8.55556rem, 17vw) max(2.55556rem, 6.8vw); }
   .illustration--hero > .illustration__background {
     grid-column: 2/4;
