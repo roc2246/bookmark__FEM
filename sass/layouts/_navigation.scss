@@ -1,4 +1,22 @@
 .nav{
+
+    &__toggle{
+        height: rem(25px);
+        padding: rem(6px) 0;
+    }
+
+    &__close, &__open{
+        width: rem(18px);
+        height: rem(14px);
+
+    }
+    
+    &__close{
+        display: none;
+    }
+
+
+
     &--top > &__links{
         display: none;
     }
