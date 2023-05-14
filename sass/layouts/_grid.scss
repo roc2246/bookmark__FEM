@@ -1,17 +1,29 @@
 .illustration {
   display: grid;
+
   &--hero {
     grid-template-columns: rem(53px) rem(250px) rem(31px);
     grid-template-rows: rem(51px) rem(154px) rem(46px);
   }
-
   &--hero > &__background {
     grid-column: 2/4;
     grid-row: 2/3;
   }
-
   &--hero > &__img {
     grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  &--selection {
+    grid-template-columns: rem(31px) rem(275px) rem(35px);
+    grid-template-rows: rem(34px) rem(165px) rem(36px);
+  }
+  &--selection > &__background {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  &--selection > &__img {
+    grid-column: 2/4;
     grid-row: 1/2;
   }
 }

@@ -52,17 +52,18 @@ input {
   border-bottom-left-radius: 22.22222rem;
   margin-left: auto; }
 
-.illustration--selection > .illustration__background {
-  border-top-right-radius: 22.22222rem;
-  border-bottom-right-radius: 22.22222rem; }
-
 .illustration--hero > .illustration__img {
   aspect-ratio: 657/466;
   width: 18.88889rem;
   margin-left: -1rem; }
 
+.illustration--selection > .illustration__background {
+  border-top-right-radius: 22.22222rem;
+  border-bottom-right-radius: 22.22222rem; }
+
 .illustration--selection > .illustration__img {
-  aspect-ratio: 379/245; }
+  aspect-ratio: 379/245;
+  width: 17.22222rem; }
 
 .hero {
   display: flex;
@@ -80,4 +81,13 @@ input {
     grid-row: 2/3; }
   .illustration--hero > .illustration__img {
     grid-column: 1/3;
+    grid-row: 1/2; }
+  .illustration--selection {
+    grid-template-columns: 1.72222rem 15.27778rem 1.94444rem;
+    grid-template-rows: 1.88889rem 9.16667rem 2rem; }
+  .illustration--selection > .illustration__background {
+    grid-column: 1/3;
+    grid-row: 2/3; }
+  .illustration--selection > .illustration__img {
+    grid-column: 2/4;
     grid-row: 1/2; }

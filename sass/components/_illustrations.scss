@@ -8,23 +8,25 @@ $border-radius: rem(400px);
 
     background-color: map-get($map: $colors-primary, $key: "soft blue");
   }
+
   &--hero > &__background {
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
     margin-left: auto;
 
   }
-
-  &--selection > &__background {
-    border-top-right-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
-  }
   &--hero > &__img {
     aspect-ratio: 657/466;
     width: rem(340px);
     margin-left: -1rem;
   }
+  
+  &--selection > &__background {
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
   &--selection > &__img {
     aspect-ratio: 379/245;
+    width: rem(310px);
   }
 }
