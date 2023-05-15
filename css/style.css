@@ -130,6 +130,11 @@ input {
   aspect-ratio: 379/245;
   width: max(17.22222rem, 37vw); }
 
+hr {
+  width: 100%;
+  margin-left: .5rem;
+  margin-right: .5rem; }
+
 .nav__anchor {
   font-size: 0.75rem;
   color: black; }
