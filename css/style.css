@@ -130,10 +130,9 @@ input {
   aspect-ratio: 379/245;
   width: max(17.22222rem, 37vw); }
 
-hr {
+.tabs__line-break {
   width: 100%;
-  margin-left: .5rem;
-  margin-right: .5rem; }
+  margin: 0 1.72222rem; }
 
 .nav__anchor {
   font-size: 0.75rem;
@@ -230,11 +229,22 @@ header {
   margin-top: max(8.66667rem, 7vw); }
 
 .tabs {
-  margin-top: max(2.22222rem, 5.5vw); }
+  margin: max(2.22222rem, 5.5vw) auto 4rem auto; }
 
 .tab {
-  padding: 1.55556rem 1.94444rem;
-  font-size: 1rem; }
+  padding-top: 1.11111rem;
+  font-size: 1rem;
+  color: #9194a1; }
+  .tab:hover {
+    display: none; }
+  .tab__border {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 7.88889rem;
+    height: 1.11111rem; }
   .tab--selected {
-    border-bottom-style: solid;
-    border-bottom-color: #fa5757; }
+    color: black; }
+    .tab--selected > .tab__border {
+      border-bottom-style: solid;
+      border-bottom-color: #fa5757; }

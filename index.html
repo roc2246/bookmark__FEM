@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
-    >
+    />
 
-    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/style.css" />
 
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
@@ -21,7 +21,7 @@
         src="./images/logo-bookmark.svg"
         alt="bookmark-logo"
         class="bookmark-logo"
-      >
+      />
 
       <nav class="nav nav--top">
         <button class="nav__toggle">
@@ -29,12 +29,12 @@
             src="./images/icon-hamburger.svg"
             alt="open navigation"
             class="nav__open"
-          >
+          />
           <img
             src="./images/icon-close.svg"
             alt="close navigation"
             class="nav__close"
-          >
+          />
         </button>
 
         <ul class="nav__links">
@@ -75,7 +75,7 @@
             src="./images/illustration-hero.svg"
             alt="hero illustration"
             class="illustration__img"
-          >
+          />
         </div>
       </section>
 
@@ -88,12 +88,21 @@
         </p>
 
         <div class="tabs">
-          <hr class="tabs__line-break line-break line-break--dotted" >
-          <button class="tab tab--selected">Simple Bookmarking</button>
-          <hr class="tabs__line-break line-break line-break--dotted" >
-          <button class="tab">Speedy Searching</button>
-          <hr class="tabs__line-break line-break line-break--dotted" >
-          <button class="tab">Easy Sharing</button>
+          <hr class="tabs__line-break line-break" />
+          <button class="tab tab--selected">
+            Simple Bookmarking <br /><span class="tab__border">&nbsp;</span>
+          </button>
+          <hr class="tabs__line-break line-break" />
+          <button class="tab">
+            Speedy Searching
+
+            <br /><span class="tab__border">&nbsp;</span>
+          </button>
+          <hr class="tabs__line-break line-break" />
+          <button class="tab">
+            Easy Sharing <br /><span class="tab__border">&nbsp;</span>
+          </button>
+          <hr class="tabs__line-break line-break line-break--tab-end" />
         </div>
 
         <section class="selection">
@@ -105,7 +114,7 @@
               src="./images/illustration-features-tab-1.svg"
               alt="bookmark illustration"
               class="illustration__img"
-            >
+            />
           </div>
 
           <div class="selection__info">
@@ -133,10 +142,10 @@
               src="./images/logo-chrome.svg"
               alt="chrome"
               class="browser__img"
-            >
+            />
             <h3 class="browser__heading">Add to Chrome</h3>
             <p class="browser__paragraph">Minimum version 62</p>
-            <hr class="browser__line-break line-break line-break--dotted" >
+            <hr class="browser__line-break line-break line-break--dotted" />
             <button class="browser__btn btn btn--blue">
               Add & Install Extension
             </button>
@@ -147,10 +156,10 @@
               src="./images/logo-firefox.svg"
               alt="firefox"
               class="browser__img"
-            >
+            />
             <h3 class="browser__heading">Add to Firefox</h3>
             <p class="browser__paragraph">Minimum version 55</p>
-            <hr class="browser__line-break line-break line-break--dotted" >
+            <hr class="browser__line-break line-break line-break--dotted" />
             <button class="browser__btn btn btn--blue">
               Add & Install Extension
             </button>
@@ -161,10 +170,10 @@
               src="./images/logo-opera.svg"
               alt="opera"
               class="browser__img"
-            >
+            />
             <h3 class="browser__heading">Add to Opera</h3>
             <p class="browser__paragraph">Minimum version 46</p>
-            <hr class="browser__line-break line-break line-break--dotted" >
+            <hr class="browser__line-break line-break line-break--dotted" />
             <button class="browser__btn btn btn--blue">
               Add & Install Extension
             </button>
@@ -179,7 +188,7 @@
           answered please feel free to email us.
         </p>
 
-        <hr class="questions__line-break line-break line-break--solid" >
+        <hr class="questions__line-break line-break line-break--solid" />
 
         <div class="question">
           <h4 class="question__topic">What is Bookmark?</h4>
@@ -188,7 +197,7 @@
               src="./images/icon-arrow.svg"
               alt="open question"
               class="question__open"
-            >
+            />
             <!-- <img
               src="./images/icon-close.svg"
               alt="close question"
@@ -201,7 +210,7 @@
             quis quam ornare mattis.
           </p>
         </div>
-        <hr class="questions__line-break line-break line-break--solid" >
+        <hr class="questions__line-break line-break line-break--solid" />
 
         <div class="question">
           <h4 class="question__topic">How can I request a new browser?</h4>
@@ -210,7 +219,7 @@
               src="./images/icon-arrow.svg"
               alt="open question"
               class="question__open"
-            >
+            />
             <!-- <img
               src="./images/icon-close.svg"
               alt="close question"
@@ -226,7 +235,7 @@
             imperdiet.
           </p>
         </div>
-        <hr class="questions__line-break line-break line-break--solid" >
+        <hr class="questions__line-break line-break line-break--solid" />
 
         <div class="question">
           <h4 class="question__topic">Is there a mobile app?</h4>
@@ -235,7 +244,7 @@
               src="./images/icon-arrow.svg"
               alt="open question"
               class="question__open"
-            >
+            />
             <!-- <img
               src="./images/icon-close.svg"
               alt="close question"
@@ -249,7 +258,7 @@
             ex et ultricies bibendum.
           </p>
         </div>
-        <hr class="questions__line-break line-break line-break--solid" >
+        <hr class="questions__line-break line-break line-break--solid" />
 
         <div class="question">
           <h4 class="question__topic">What about other Chromium browsers?</h4>
@@ -258,7 +267,7 @@
               src="./images/icon-arrow.svg"
               alt="open question"
               class="question__open"
-            >
+            />
             <!-- <img
               src="./images/icon-close.svg"
               alt="close question"
@@ -271,7 +280,7 @@
             pellentesque non ut velit.
           </p>
         </div>
-        <hr class="questions__line-break line-break line-break--solid" >
+        <hr class="questions__line-break line-break line-break--solid" />
         <button class="questions__btn btn btn--blue">More Info</button>
       </section>
     </main>
@@ -285,7 +294,13 @@
           Stay up-to-date with what we’re doing
         </h2>
         <form class="CTA__contact">
-          <input type="email" name="email" id="email" class="CTA__input" placeholder="Enter your email address">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="CTA__input"
+            placeholder="Enter your email address"
+          />
           <button class="CTA__btn btn btn--red">Contact Us</button>
         </form>
       </section>
@@ -294,7 +309,7 @@
           src="./images/logo-bookmark.svg"
           alt="bookmark-logo"
           class="bookmark-logo"
-        >
+        />
 
         <nav class="nav nav--bottom">
           <ul class="nav__links">
@@ -318,7 +333,7 @@
                   src="./images/icon-facebook.svg"
                   alt="facebook"
                   class="nav__img"
-                >
+                />
               </a>
             </li>
 
@@ -328,7 +343,7 @@
                   src="./images/icon-twitter.svg"
                   alt="twitter"
                   class="nav__img"
-                >
+                />
               </a>
             </li>
           </ul>
