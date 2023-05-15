@@ -1,0 +1,9 @@
+.hero {
+  margin-top: #{"max(#{rem(85px)}, 3.5vh)"};
+}
+
+@media (min-width: 713px) {
+    .hero{
+        margin-left: #{"max(#{rem(31px)}, 6vw)"};
+    }
+}

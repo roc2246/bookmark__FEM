@@ -9,6 +9,10 @@ $border-radius: rem(400px);
     background-color: map-get($map: $colors-primary, $key: "soft blue");
   }
 
+  &--hero{
+    margin-left: auto;
+  }
+
   &--hero > &__background {
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;

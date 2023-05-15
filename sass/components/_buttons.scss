@@ -13,10 +13,26 @@
 
   }
   &--red {
-    background-color: map-get($map: $colors-primary, $key: "soft red");
+    background-color: map-get($map: $colors-primary, $key: "soft blue");
     &:hover {
-      border-color: map-get($map: $colors-primary, $key: "soft red");
-      color: map-get($map: $colors-primary, $key: "soft red");
+      border-color: map-get($map: $colors-primary, $key: "soft blue");
+      color: map-get($map: $colors-primary, $key: "soft blue");
+    }
+  }
+
+  &--blue {
+    background-color: map-get($map: $colors-primary, $key: "soft blue");
+    &:hover {
+      border-color: map-get($map: $colors-primary, $key: "soft blue");
+      color: map-get($map: $colors-primary, $key: "soft blue");
+    }
+  }
+
+  &--grey {
+    background-color: map-get($map: $colors-secondary, $key: "grayish blue");
+    &:hover {
+      border-color: map-get($map: $colors-secondary, $key: "grayish blue");
+      color: map-get($map: $colors-secondary, $key: "grayish blue");
     }
   }
 }

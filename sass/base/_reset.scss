@@ -22,6 +22,10 @@ h1, h2, h6{
     font-weight: map-get($map: $font-weights, $key: "bolder");
 }
 
+h1{
+    line-height: 2rem;
+}
+
 h4{
     font-weight: map-get($map: $font-weights, $key: "bold");
 }

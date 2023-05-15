@@ -25,6 +25,9 @@ a {
 h1, h2, h6 {
   font-weight: 500; }
 
+h1 {
+  line-height: 2rem; }
+
 h4 {
   font-weight: 400; }
 
@@ -44,6 +47,19 @@ input {
   color: #9194a1;
   font-size: 0.88889rem; }
 
+.hero__info {
+  width: max(20rem, 33vw);
+  max-width: 30rem; }
+  .hero__info > * {
+    text-align: center; }
+  @media (min-width: 762px) {
+    .hero__info > * {
+      text-align: left; } }
+
+@media (min-width: 761px) {
+  .hero__heading {
+    font-size: 2rem; } }
+
 .btn {
   color: white;
   font-weight: 600;
@@ -55,10 +71,20 @@ input {
     background-color: white;
     outline: 0.11111rem solid; }
   .btn--red {
-    background-color: #fa5757; }
+    background-color: #5368df; }
     .btn--red:hover {
-      border-color: #fa5757;
-      color: #fa5757; }
+      border-color: #5368df;
+      color: #5368df; }
+  .btn--blue {
+    background-color: #5368df; }
+    .btn--blue:hover {
+      border-color: #5368df;
+      color: #5368df; }
+  .btn--grey {
+    background-color: #9194a1; }
+    .btn--grey:hover {
+      border-color: #9194a1;
+      color: #9194a1; }
 
 .nav__btn {
   padding-left: 1.83333rem;
@@ -68,6 +94,9 @@ input {
   height: max(11.16667rem, 23.75vw);
   width: 100%;
   background-color: #5368df; }
+
+.illustration--hero {
+  margin-left: auto; }
 
 .illustration--hero > .illustration__background {
   border-top-left-radius: 22.22222rem;
@@ -100,7 +129,10 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
-  justify-content: flex-end; }
+  justify-content: space-evenly; }
+  .hero__btns {
+    display: flex;
+    gap: 1rem; }
 
 .nav__link {
   display: flex;
@@ -161,3 +193,10 @@ header {
 
 .bookmark-logo {
   align-self: center; }
+
+.hero {
+  margin-top: max(4.72222rem, 3.5vh); }
+
+@media (min-width: 713px) {
+  .hero {
+    margin-left: max(1.72222rem, 6vw); } }
