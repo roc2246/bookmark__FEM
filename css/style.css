@@ -36,7 +36,8 @@ h6 {
 
 p {
   color: #9194a1;
-  line-height: 1.55556rem; }
+  line-height: 1.55556rem;
+  font-size: .85rem; }
 
 input {
   border: none;

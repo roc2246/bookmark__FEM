@@ -37,6 +37,7 @@ h6{
 p{
     color: map-get($map: $colors-secondary, $key: "grayish blue");
     line-height: rem(28px);
+    font-size: .85rem;
 }
 
 input{
