@@ -49,20 +49,27 @@ input {
   font-size: 0.88889rem; }
 
 .hero__info {
-  width: max(20rem, 33vw);
-  max-width: 30rem; }
+  width: max(20rem, 33vw); }
   .hero__info > * {
     text-align: center; }
   @media (min-width: 762px) {
     .hero__info > * {
       text-align: left; } }
 
+.hero__paragraph {
+  width: max(16rem, 33vw);
+  margin: 0 auto 2rem auto; }
+
+@media (min-width: 762px) {
+  .hero__paragraph {
+    margin-left: unset; } }
+
 @media (min-width: 761px) {
   .hero__heading {
     font-size: 2rem; } }
 
 .features__heading, .features__paragraph {
-  max-width: 30rem;
+  width: max(17rem, 32vw);
   margin-left: auto;
   margin-right: auto;
   text-align: center; }

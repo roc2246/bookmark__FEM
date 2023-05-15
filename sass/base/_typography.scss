@@ -1,7 +1,6 @@
 .hero {
   &__info {
     width: #{"max(20rem, 33vw)"};
-    max-width: 30rem;
     & > * {
       text-align: center;
     }
@@ -9,6 +8,15 @@
       & > * {
         text-align: left;
       }
+    }
+  }
+  &__paragraph {
+    width: #{"max(16rem, 33vw)"};
+    margin: 0 auto 2rem auto;
+  }
+  @media (min-width: 762px) {
+    &__paragraph {
+      margin-left: unset;
     }
   }
   @media (min-width: 761px) {
@@ -21,7 +29,8 @@
 .features {
   &__heading,
   &__paragraph {
-    max-width: 30rem;
+    width: #{"max(17rem, 32vw)"};
+
     margin-left: auto;
     margin-right: auto;
     text-align: center;
