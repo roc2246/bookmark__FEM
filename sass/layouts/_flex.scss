@@ -4,21 +4,21 @@ header {
   justify-content: space-between;
 }
 
+.nav {
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .hero {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
   justify-content: space-evenly;
-&__btns{
-  display: flex;
-  gap: 1rem;
-}
-}
-
-.nav {
-  &__link {
+  &__btns {
     display: flex;
-    align-items: center;
+    gap: 1rem;
   }
 }
 
@@ -27,4 +27,11 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+}
+
+.tabs{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }

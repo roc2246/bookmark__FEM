@@ -60,6 +60,12 @@ input {
   .hero__heading {
     font-size: 2rem; } }
 
+.features__heading, .features__paragraph {
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
 .btn {
   color: white;
   font-weight: 600;
@@ -125,6 +131,10 @@ header {
   flex-direction: row;
   justify-content: space-between; }
 
+.nav__link {
+  display: flex;
+  align-items: center; }
+
 .hero {
   display: flex;
   flex-direction: row;
@@ -134,15 +144,17 @@ header {
     display: flex;
     gap: 1rem; }
 
-.nav__link {
-  display: flex;
-  align-items: center; }
-
 .selection {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start; }
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
 
 .illustration {
   display: grid; }
@@ -200,3 +212,16 @@ header {
 @media (min-width: 713px) {
   .hero {
     margin-left: max(1.72222rem, 6vw); } }
+
+.features {
+  margin-top: max(8.66667rem, 7vw); }
+
+.tabs {
+  margin-top: max(2.22222rem, 5.5vw); }
+
+.tab {
+  padding: 1.55556rem 1.94444rem;
+  font-size: 1rem; }
+  .tab--selected {
+    border-bottom-style: solid;
+    border-bottom-color: #fa5757; }

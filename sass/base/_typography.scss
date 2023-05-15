@@ -1,22 +1,29 @@
 .hero {
-    &__info{
-        width: #{'max(20rem, 33vw)'};
-        max-width: 30rem;
-        & > *{
-            text-align: center;
-        }
-        @media (min-width: 762px) {
-            & > *{
-                text-align: left;
-            }
-        }
-       
+  &__info {
+    width: #{"max(20rem, 33vw)"};
+    max-width: 30rem;
+    & > * {
+      text-align: center;
     }
-    @media (min-width: 761px) {
-        &__heading{
-            font-size: 2rem;
-        }
+    @media (min-width: 762px) {
+      & > * {
+        text-align: left;
+      }
     }
-   
+  }
+  @media (min-width: 761px) {
+    &__heading {
+      font-size: 2rem;
+    }
+  }
 }
 
+.features {
+  &__heading,
+  &__paragraph {
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}

@@ -1,0 +1,18 @@
+.features{
+    margin-top: #{"max(#{rem(156px)}, 7vw)"};
+}
+
+.tabs{
+    margin-top: #{"max(#{rem(40px)}, 5.5vw)"};
+    // width: 100%;
+}
+
+.tab{
+    padding: rem(28px) rem(35px);
+    font-size: 1rem;
+    // width: #{"max(#{rem(310px)}, 14.5vw)"};
+    &--selected{
+        border-bottom-style: solid ;
+        border-bottom-color: map-get($map: $colors-primary, $key: "soft red") ;
+    }
+}
