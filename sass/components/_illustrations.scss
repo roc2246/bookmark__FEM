@@ -23,6 +23,10 @@ $border-radius: rem(400px);
     aspect-ratio: 580/386;
     width: #{"max(#{rem(310px)}, 40vw)"};
     margin-left: auto;
+  } 
+
+  &--selection{
+    margin-right: auto;
   }
   
   &--selection > &__background {

@@ -74,6 +74,15 @@ input {
   margin-right: auto;
   text-align: center; }
 
+.selection__info {
+  margin-top: 3rem;
+  width: max(18rem, 26vw); }
+  .selection__info > * {
+    text-align: center; }
+  @media (min-width: 950px) {
+    .selection__info > * {
+      text-align: left; } }
+
 .btn {
   color: white;
   font-weight: 600;
@@ -122,6 +131,9 @@ input {
   width: max(17.22222rem, 40vw);
   margin-left: auto; }
 
+.illustration--selection {
+  margin-right: auto; }
+
 .illustration--selection > .illustration__background {
   border-top-right-radius: 22.22222rem;
   border-bottom-right-radius: 22.22222rem; }
@@ -164,7 +176,8 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start; }
+  justify-content: space-evenly;
+  gap: 1rem; }
 
 .tabs {
   display: flex;
@@ -251,3 +264,7 @@ header {
     .tab--selected > .tab__border {
       border-bottom-style: solid;
       border-bottom-color: #fa5757; }
+
+@media (min-width: 900px) {
+  .selection {
+    margin-right: max(1.72222rem, 15vw); } }

@@ -36,3 +36,18 @@
     text-align: center;
   }
 }
+
+.selection {
+  &__info {
+    margin-top: 3rem;
+    width: #{"max(18rem, 26vw)"};
+    & > * {
+      text-align: center;
+    }
+    @media (min-width: 950px) {
+      & > * {
+        text-align: left;
+      }
+    }
+  }
+}

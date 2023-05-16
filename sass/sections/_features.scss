@@ -27,3 +27,10 @@
     }
   }
 }
+
+@media (min-width: 900px) {
+  .selection{
+      margin-right: #{"max(#{rem(31px)}, 15vw)"};
+    
+  }
+}
