@@ -134,6 +134,10 @@ input {
   width: 100%;
   margin: 0 1.72222rem; }
 
+@media (min-width: 550px) {
+  .tabs__line-break:not(.line-break--tab-end) {
+    display: none; } }
+
 .nav__anchor {
   font-size: 0.75rem;
   color: black; }
@@ -234,14 +238,13 @@ header {
 .tab {
   padding-top: 1.11111rem;
   font-size: 1rem;
-  color: #9194a1; }
-  .tab:hover {
-    display: none; }
+  color: #9194a1;
+  min-width: 13.36111rem; }
   .tab__border {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 7.88889rem;
+    width: max(7.88889rem, 16.7vw);
     height: 1.11111rem; }
   .tab--selected {
     color: black; }

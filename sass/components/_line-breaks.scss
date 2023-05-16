@@ -3,4 +3,9 @@
     width: 100%;
     margin: 0 rem(31px);
   }
+  @media (min-width: 550px) {
+    &__line-break:not(.line-break--tab-end){
+      display: none;
+    }
+  }
 }

@@ -10,15 +10,13 @@
   padding-top: rem(20px);
   font-size: 1rem;
   color: map-get($map: $colors-secondary, $key: "grayish blue");
-&:hover{
-    display: none;
-}
+  min-width: rem(240.5px);
   &__border {
     display: block;
     margin-left: auto;
     margin-right: auto;
 
-    width: rem(142px);
+    width: #{"max(#{rem(142px)}, 16.7vw)"};
     height: rem(20px);
   }
   &--selected {
