@@ -15,6 +15,7 @@
 
 .tabs {
   margin: #{"max(#{rem(40px)}, 5.5vw)"} auto rem(72px) auto;
+  width: #{"max(#{rem(312px)}, 50.5vw)"};
 }
 
 .tab {

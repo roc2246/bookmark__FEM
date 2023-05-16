@@ -151,9 +151,9 @@ input {
 
 .tabs__line-break {
   width: 100%;
-  margin: 0 1.72222rem; }
+  margin: 0; }
 
-@media (min-width: 550px) {
+@media (min-width: 953px) {
   .tabs__line-break:not(.line-break--tab-end) {
     display: none; } }
 
@@ -260,7 +260,8 @@ header {
     display: inline; } }
 
 .tabs {
-  margin: max(2.22222rem, 5.5vw) auto 4rem auto; }
+  margin: max(2.22222rem, 5.5vw) auto 4rem auto;
+  width: max(17.33333rem, 50.5vw); }
 
 .tab {
   padding-top: 1.11111rem;
