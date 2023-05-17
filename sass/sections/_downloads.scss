@@ -3,17 +3,17 @@
 }
 
 .browser {
-  width: 278px;
-  height: 358px;
+  width: rem(278px);
+  height: rem(358px);
   border: solid;
   border-radius: 1rem;
 
   &__img {
-    margin-top: 31px;
+    margin-top: rem(31px);
     margin-bottom: 31px;
   }
   &__btn {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: rem(25px);
+    margin-bottom: rem(25px);
   }
 }
