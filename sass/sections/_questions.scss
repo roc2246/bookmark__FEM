@@ -1,0 +1,25 @@
+.questions {
+  margin-left: auto;
+  margin-right: auto;
+
+  width: #{"max(#{rem(311px)}, 37.63vw)"};
+
+  &__line-break:nth-child(3) {
+    display: none;
+  }
+
+  &__btn{
+    display: block;
+    margin-top: #{"max(#{rem(46px)}, 3.75vw)"};
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1096px) {
+  .questions {
+    &__line-break:nth-child(3) {
+      display: block;
+    }
+  }
+}
