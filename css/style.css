@@ -159,7 +159,11 @@ input {
   width: max(17.22222rem, 37vw); }
 
 .line-break--dotted {
-  border-top: 1px dotted; }
+  background-image: linear-gradient(to right, #9194a1 10%, rgba(255, 255, 255, 0) 0%);
+  background-position: top;
+  background-size: 20px 2px;
+  background-repeat: repeat-x;
+  padding: 2px; }
 
 .tabs__line-break {
   width: 100%;
