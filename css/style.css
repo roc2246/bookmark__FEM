@@ -169,11 +169,6 @@ input {
   .tabs__line-break:not(.line-break--tab-end) {
     display: none; } }
 
-.browser__line-break {
-  width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 0; }
-
 .nav__anchor {
   font-size: 0.75rem;
   color: black; }
@@ -320,6 +315,10 @@ header {
   .browser__img {
     margin-top: 1.72222rem;
     margin-bottom: 31px; }
+  .browser__line-break {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 0; }
   .browser__btn {
     margin-top: 1.38889rem;
     margin-bottom: 1.38889rem; }
