@@ -161,9 +161,10 @@ input {
 .line-break--dotted {
   background-image: linear-gradient(to right, #9194a1 10%, rgba(255, 255, 255, 0) 0%);
   background-position: top;
-  background-size: 20px 2px;
+  background-size: 1.11111rem 0.11111rem;
   background-repeat: repeat-x;
-  padding: 2px; }
+  padding: 0.11111rem;
+  height: 0; }
 
 .tabs__line-break {
   width: 100%;

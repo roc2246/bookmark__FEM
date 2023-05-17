@@ -6,10 +6,12 @@
       rgba(255, 255, 255, 0) 0%
     );
     background-position: top;
-    background-size: 20px 2px;
+    background-size: rem(20px) rem(2px);
     background-repeat: repeat-x;
 
-    padding: 2px;
+    padding: rem(2px);
+
+    height: 0;
   }
 }
 
