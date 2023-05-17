@@ -93,6 +93,11 @@ input {
 .download__heading, .download__paragraph {
   text-align: center; }
 
+.download__paragraph {
+  max-width: 27.77778rem;
+  margin-left: auto;
+  margin-right: auto; }
+
 .browser__heading, .browser__paragraph {
   margin: 0; }
 
@@ -214,7 +219,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem; }
+  gap: 1.77778rem; }
 
 .browser {
   display: flex;
@@ -312,11 +317,14 @@ header {
 .download {
   margin: 8.5rem 1.61111rem; }
 
+.browsers {
+  margin-top: max(2.5rem, 4.4vh); }
+
 .browser {
   width: 15.44444rem;
   height: 19.88889rem;
-  border: solid;
-  border-radius: 1rem; }
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px -4px; }
   .browser__img {
     margin-top: 1.72222rem;
     margin-bottom: 1.72222rem; }
@@ -327,3 +335,11 @@ header {
   .browser__btn {
     margin-top: 1.38889rem;
     margin-bottom: 1.38889rem; }
+
+@media (min-width: 646px) {
+  .browser:nth-child(2) {
+    margin-top: 2.77778rem; } }
+
+@media (min-width: 956px) {
+  .browser:nth-child(3) {
+    margin-top: 5.55556rem; } }

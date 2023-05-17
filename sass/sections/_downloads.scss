@@ -2,11 +2,16 @@
   margin: rem(153px) rem(29px);
 }
 
+.browsers{
+  margin-top: #{"max(#{rem(45px)}, 4.4vh)"};
+}
+
 .browser {
   width: rem(278px);
   height: rem(358px);
-  border: solid;
+
   border-radius: 1rem;
+  box-shadow: 0 2px 8px -4px ;
 
   &__img {
     margin-top: rem(31px);
@@ -22,3 +27,17 @@
     margin-bottom: rem(25px);
   }
 }
+
+@media (min-width: 646px) {
+  .browser:nth-child(2){
+    margin-top: rem(50px);
+  }
+}
+
+
+@media (min-width: 956px) {
+  .browser:nth-child(3){
+    margin-top: rem(100px);
+  }
+}
+

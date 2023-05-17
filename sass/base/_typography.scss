@@ -65,6 +65,11 @@
   &__paragraph {
     text-align: center;
   }
+  &__paragraph{
+    max-width: rem(500px);
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .browser {
