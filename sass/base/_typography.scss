@@ -60,9 +60,19 @@
   }
 }
 
+.download {
+  &__heading,
+  &__paragraph {
+    text-align: center;
+  }
+}
 
-.download{
-  &__heading, &__paragraph{
-  text-align: center;
+.browser {
+  &__heading,
+  &__paragraph {
+    margin: 0;
+  }
+  &__paragraph{
+    margin-top: .5rem;
   }
 }

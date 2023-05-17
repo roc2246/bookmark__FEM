@@ -1,7 +1,19 @@
-.download{
-    margin: rem(153px) rem(29px);
+.download {
+  margin: rem(153px) rem(29px);
 }
 
-.browser{
-    
+.browser {
+  width: 278px;
+  height: 358px;
+  border: solid;
+  border-radius: 1rem;
+
+  &__img {
+    margin-top: 31px;
+    margin-bottom: 31px;
+  }
+  &__btn {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 }

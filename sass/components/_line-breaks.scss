@@ -1,11 +1,25 @@
+.line-break {
+  &--dotted {
+    border-top: 1px dotted;
+  }
+}
+
 .tabs {
   &__line-break {
     width: 100%;
     margin: 0;
   }
   @media (min-width: 953px) {
-    &__line-break:not(.line-break--tab-end){
+    &__line-break:not(.line-break--tab-end) {
       display: none;
     }
+  }
+}
+
+.browser {
+  &__line-break {
+    width: 100%;
+    margin-top: 36px;
+    margin-bottom: 0;
   }
 }

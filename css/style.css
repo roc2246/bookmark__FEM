@@ -93,6 +93,12 @@ input {
 .download__heading, .download__paragraph {
   text-align: center; }
 
+.browser__heading, .browser__paragraph {
+  margin: 0; }
+
+.browser__paragraph {
+  margin-top: .5rem; }
+
 .btn {
   color: white;
   font-weight: 600;
@@ -152,6 +158,9 @@ input {
   aspect-ratio: 379/245;
   width: max(17.22222rem, 37vw); }
 
+.line-break--dotted {
+  border-top: 1px dotted; }
+
 .tabs__line-break {
   width: 100%;
   margin: 0; }
@@ -159,6 +168,11 @@ input {
 @media (min-width: 953px) {
   .tabs__line-break:not(.line-break--tab-end) {
     display: none; } }
+
+.browser__line-break {
+  width: 100%;
+  margin-top: 36px;
+  margin-bottom: 0; }
 
 .nav__anchor {
   font-size: 0.75rem;
@@ -194,6 +208,18 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center; }
+
+.browsers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; }
+
+.browser {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .illustration {
   display: grid; }
@@ -285,3 +311,15 @@ header {
 
 .download {
   margin: 8.5rem 1.61111rem; }
+
+.browser {
+  width: 278px;
+  height: 358px;
+  border: solid;
+  border-radius: 1rem; }
+  .browser__img {
+    margin-top: 31px;
+    margin-bottom: 31px; }
+  .browser__btn {
+    margin-top: 25px;
+    margin-bottom: 25px; }
