@@ -1,11 +1,14 @@
 $min-width: 675px;
 
 .nav {
+  .bookmark-logo-white {
+    display: none;
+  }
   &__toggle {
     height: rem(25px);
+    width: rem(18px);
     padding: rem(6px) 0;
   }
-
 
   @media (min-width: $min-width) {
     &__toggle {
@@ -26,6 +29,28 @@ $min-width: 675px;
   &--top > &__links {
     display: none;
   }
+
+  &--mobile {
+    position: fixed;
+    z-index: 1;
+    padding: rem(41px) #{"max(#{rem(31px)}, 6vw)"};
+    left: 0;
+    top: 0;
+    width: calc(100vw - #{"max(#{rem(62px)}, 12vw)"});
+    height: 100vh;
+    background-color: hsla(229, 31%, 21%, 0.801);
+
+    & > .nav__links {
+      margin-top: rem(42px);
+      & > .nav__link {
+        border-top: 1px solid;
+        border-top-color: map-get($map: $colors-secondary, $key: "grayish blue");
+        padding-top: rem(23px);
+        padding-bottom: rem(23px);
+      }
+    }
+  }
+
   @media (min-width: $min-width) {
     &--top > &__links {
       display: flex;

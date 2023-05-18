@@ -1,10 +1,18 @@
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+// header {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+// }
 
 .nav {
+  .bookmark-logo-regular{
+    object-fit: contain;
+  }
+  &--top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   &__link {
     display: flex;
     align-items: center;

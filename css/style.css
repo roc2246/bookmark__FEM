@@ -212,7 +212,10 @@ aside {
   font-size: 0.75rem;
   color: black; }
 
-header {
+.nav .bookmark-logo-regular {
+  object-fit: contain; }
+
+.nav--top {
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
@@ -292,6 +295,13 @@ header {
     justify-content: space-between;
     gap: 1rem; } }
 
+.nav--mobile {
+  display: grid;
+  grid-template-columns: auto 1rem;
+  grid-template-rows: 1.27778rem auto; }
+  .nav--mobile > .nav__links {
+    grid-column: 1/3; }
+
 .illustration {
   display: grid; }
   .illustration--hero {
@@ -323,8 +333,12 @@ header {
     grid-row: 1/2;
     grid-column: 2/3; }
 
+.nav .bookmark-logo-white {
+  display: none; }
+
 .nav__toggle {
   height: 1.38889rem;
+  width: 1rem;
   padding: 0.33333rem 0; }
 
 @media (min-width: 675px) {
@@ -340,6 +354,23 @@ header {
 
 .nav--top > .nav__links {
   display: none; }
+
+.nav--mobile {
+  position: fixed;
+  z-index: 1;
+  padding: 2.27778rem max(1.72222rem, 6vw);
+  left: 0;
+  top: 0;
+  width: calc(100vw - max(3.44444rem, 12vw));
+  height: 100vh;
+  background-color: rgba(37, 43, 70, 0.801); }
+  .nav--mobile > .nav__links {
+    margin-top: 2.33333rem; }
+    .nav--mobile > .nav__links > .nav__link {
+      border-top: 1px solid;
+      border-top-color: #9194a1;
+      padding-top: 1.27778rem;
+      padding-bottom: 1.27778rem; }
 
 @media (min-width: 675px) {
   .nav--top > .nav__links {
