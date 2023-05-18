@@ -1,3 +1,13 @@
+.nav {
+  &--bottom > &__links {
+    & > li > a {
+      color: white;
+      font-size: rem(16px);
+      text-align: center;
+    }
+  }
+}
+
 .hero {
   &__info {
     width: #{"max(20rem, 33vw)"};
@@ -82,18 +92,18 @@
   }
 }
 
-.questions{
+.questions {
   &__heading,
   &__paragraph {
     text-align: center;
   }
-  &__paragraph{
+  &__paragraph {
     margin-bottom: rem(80px);
   }
 }
 
 @media (min-width: 1096px) {
-  &__paragraph{
+  &__paragraph {
     margin-bottom: rem(62px);
   }
 }
@@ -104,14 +114,13 @@
   }
 }
 
-
-aside{
+aside {
   text-align: center;
 }
 
-.CTA{
-  &__heading{
-    &--primary{
+.CTA {
+  &__heading {
+    &--primary {
       display: block;
       width: 20rem;
       margin-left: auto;

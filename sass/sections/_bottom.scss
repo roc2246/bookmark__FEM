@@ -1,0 +1,13 @@
+.bottom {
+  padding-top: rem(41px);
+  padding-bottom: rem(41px);
+  background-color: map-get($map: $colors-secondary, $key: "very dark blue");
+  color: white;
+}
+
+.nav {
+  &--bottom {
+    margin-top: rem(41px);
+    margin-bottom: rem(41px);
+  }
+}
