@@ -1,6 +1,24 @@
 .CTA {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  padding-top: rem(73px);
+  padding-bottom: rem(60px);
+
+  margin-top: #{"max(#{rem(122px)}, 10.3vw)"};
+
   background-color: map-get($map: $colors-primary, $key: "soft blue");
   color: white;
+
+  &__input{
+    width: rem(300px);
+  }
+  &__btn{
+    width: rem(340px);
+  }
+}
+
+@media (min-width: 500px) {
+  .CTA{
+    &__btn{
+      width: unset;
+    }
+  }
 }

@@ -103,3 +103,20 @@
     display: none;
   }
 }
+
+
+aside{
+  text-align: center;
+}
+
+.CTA{
+  &__heading{
+    &--primary{
+      display: block;
+      width: 20rem;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+  }
+}

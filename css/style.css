@@ -118,6 +118,16 @@ input {
 .question__answer {
   display: none; }
 
+aside {
+  text-align: center; }
+
+.CTA__heading--primary {
+  display: block;
+  width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
 .btn {
   color: white;
   font-weight: 600;
@@ -239,6 +249,13 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+.CTA__contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap; }
 
 .illustration {
   display: grid; }
@@ -385,7 +402,16 @@ header {
     display: block; } }
 
 .CTA {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 4.05556rem;
+  padding-bottom: 3.33333rem;
+  margin-top: max(6.77778rem, 10.3vw);
   background-color: #5368df;
   color: white; }
+  .CTA__input {
+    width: 16.66667rem; }
+  .CTA__btn {
+    width: 18.88889rem; }
+
+@media (min-width: 500px) {
+  .CTA__btn {
+    width: unset; } }
