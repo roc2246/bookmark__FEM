@@ -13,10 +13,10 @@
 
   }
   &--red {
-    background-color: map-get($map: $colors-primary, $key: "soft blue");
+    background-color: map-get($map: $colors-primary, $key: "soft red");
     &:hover {
-      border-color: map-get($map: $colors-primary, $key: "soft blue");
-      color: map-get($map: $colors-primary, $key: "soft blue");
+      border-color: map-get($map: $colors-primary, $key: "soft red");
+      color: map-get($map: $colors-primary, $key: "soft red");
     }
   }
 

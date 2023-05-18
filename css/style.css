@@ -129,10 +129,10 @@ input {
     background-color: white;
     outline: 0.11111rem solid; }
   .btn--red {
-    background-color: #5368df; }
+    background-color: #fa5757; }
     .btn--red:hover {
-      border-color: #5368df;
-      color: #5368df; }
+      border-color: #fa5757;
+      color: #fa5757; }
   .btn--blue {
     background-color: #5368df; }
     .btn--blue:hover {
@@ -383,3 +383,9 @@ header {
 @media (min-width: 1096px) {
   .questions__line-break:nth-child(3) {
     display: block; } }
+
+.CTA {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #5368df;
+  color: white; }
