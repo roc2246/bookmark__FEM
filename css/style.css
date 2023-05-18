@@ -227,10 +227,15 @@ header {
   justify-content: center;
   gap: 2rem; }
 
+@media (min-width: 720px) {
+  .nav--bottom > .nav__links {
+    flex-direction: row; } }
+
 .nav--bottom > .nav__links, .nav__link {
   justify-content: center; }
 
 .nav--social-media > .nav__links {
+  margin-left: auto;
   display: flex;
   flex-direction: row;
   gap: 2.22222rem; }
@@ -280,6 +285,12 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+@media (min-width: 720px) {
+  .bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem; } }
 
 .illustration {
   display: grid; }
@@ -445,6 +456,11 @@ header {
   padding-bottom: 2.27778rem;
   background-color: #252b46;
   color: white; }
+
+@media (min-width: 720px) {
+  .bottom {
+    padding-left: max(1.72222rem, 11.3vw);
+    padding-right: max(1.72222rem, 11.3vw); } }
 
 .nav--bottom {
   margin-top: 2.27778rem;

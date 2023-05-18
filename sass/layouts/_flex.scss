@@ -17,12 +17,19 @@ header {
     gap: rem(36px);
   }
 
+  @media (min-width: 720px) {
+    &--bottom > &__links {
+      flex-direction: row;
+    }
+  }
+
   &--bottom > &__links,
   &__link {
     justify-content: center;
   }
 
   &--social-media > &__links {
+    margin-left: auto;
     display: flex;
     flex-direction: row;
     gap: rem(40px);
@@ -83,4 +90,12 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (min-width: 720px) {
+  .bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
 }

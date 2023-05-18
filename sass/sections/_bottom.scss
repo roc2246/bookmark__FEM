@@ -5,9 +5,20 @@
   color: white;
 }
 
+
+@media (min-width: 720px) {
+    .bottom {
+     padding-left: #{"max(#{rem(31px)}, 11.3vw)"};
+     padding-right: #{"max(#{rem(31px)}, 11.3vw)"};
+    }
+  }
+  
+
 .nav {
   &--bottom {
     margin-top: rem(41px);
     margin-bottom: rem(41px);
   }
 }
+
+
