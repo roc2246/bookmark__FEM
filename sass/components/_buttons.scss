@@ -10,8 +10,14 @@
   &:hover {
     background-color: white;
     outline: rem(2px) solid;
-
   }
+  &--transparent {
+    width: rem(306px);
+    background-color: transparent;
+    border: solid;
+    border-color: white;
+  }
+
   &--red {
     background-color: map-get($map: $colors-primary, $key: "soft red");
     &:hover {

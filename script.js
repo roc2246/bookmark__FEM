@@ -4,6 +4,7 @@ const links = document.getElementsByClassName("nav")[0];
 const logo = (mode) =>
   document.getElementsByClassName(`bookmark-logo-${mode}`)[0];
 const hero = document.getElementsByClassName("hero")[0];
+const btn = document.getElementsByClassName("nav__btn")[0];
 
 const toggle = {
   block: (block) => document.getElementsByClassName(`${block}__toggle`)[0],
@@ -16,6 +17,8 @@ const toggle = {
       logo("regular").style.display = "none";
       logo("white").style.display = "inline";
       hero.style.marginTop = "max(150px, 7vh)";
+      btn.classList.add("btn--transparent");
+      btn.classList.remove("btn--red");
       links.classList.add("nav--mobile");
       links.classList.remove("nav--top");
     } else {
@@ -25,6 +28,8 @@ const toggle = {
       logo("regular").style.display = "inline";
       logo("white").style.display = "none";
       hero.style.marginTop = "max(4.72222rem, 3.5vh)";
+      btn.classList.add("btn--red");
+      btn.classList.remove("btn--transparent");
       links.classList.add("nav--top");
       links.classList.remove("nav--mobile");
     }
@@ -40,6 +45,9 @@ window.onresize = (event) => {
     logo("regular").style.display = "inline";
     logo("white").style.display = "none";
     hero.style.marginTop = "max(4.72222rem, 3.5vh)";
+    btn.classList.add("btn--red");
+    btn.classList.remove("btn--transparent");
+    links.classList.add("nav--top");
     links.classList.add("nav--top");
     links.classList.remove("nav--mobile");
   } else if (event.target.innerWidth < 675 && navMode === "mobile") {
@@ -48,6 +56,8 @@ window.onresize = (event) => {
     logo("regular").style.display = "none";
     logo("white").style.display = "inline";
     hero.style.marginTop = "max(150px, 7vh)";
+    btn.classList.add("btn--transparent");
+    btn.classList.remove("btn--red");
     links.classList.add("nav--mobile");
     links.classList.remove("nav--top");
   }
@@ -60,6 +70,8 @@ screen.orientation.addEventListener("change", (event) => {
     logo("regular").style.display = "inline";
     logo("white").style.display = "none";
     hero.style.marginTop = "max(4.72222rem, 3.5vh)";
+    btn.classList.add("btn--transparent");
+    btn.classList.remove("btn--red");
     links.classList.add("nav--top");
     links.classList.remove("nav--mobile");
   } else if (event.target.innerWidth < 675 && navMode === "mobile") {
@@ -68,6 +80,8 @@ screen.orientation.addEventListener("change", (event) => {
     logo("regular").style.display = "none";
     logo("white").style.display = "inline";
     hero.style.marginTop = "max(150px, 7vh)";
+    btn.classList.add("btn--red");
+    btn.classList.remove("btn--transparent");
     links.classList.add("nav--mobile");
     links.classList.remove("nav--top");
   }

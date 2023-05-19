@@ -49,6 +49,11 @@ input {
   color: #9194a1;
   font-size: 0.88889rem; }
 
+.nav--mobile > .nav__links > li > a {
+  color: white;
+  font-size: 0.88889rem;
+  text-align: center; }
+
 .nav--bottom > .nav__links > li > a {
   color: white;
   font-size: 0.88889rem;
@@ -143,6 +148,11 @@ aside {
   .btn:hover {
     background-color: white;
     outline: 0.11111rem solid; }
+  .btn--transparent {
+    width: 17rem;
+    background-color: transparent;
+    border: solid;
+    border-color: white; }
   .btn--red {
     background-color: #fa5757; }
     .btn--red:hover {

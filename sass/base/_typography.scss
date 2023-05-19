@@ -1,4 +1,12 @@
 .nav {
+&--mobile> &__links {
+  & > li > a {
+    color: white;
+    font-size: rem(16px);
+    text-align: center;
+  }
+}
+
   &--bottom > &__links {
     & > li > a {
       color: white;
