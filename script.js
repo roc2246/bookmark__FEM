@@ -116,7 +116,19 @@ Object.keys(questions).forEach((question) => {
 });
 
 const input = document.getElementsByClassName("CTA__input")[0];
+const mssg = document.getElementsByClassName("CTA__error")[0];
+const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 document.getElementsByClassName("CTA__btn")[0].onclick = (e) => {
   e.preventDefault();
-  input.classList.add("CTA__input--error");
+  if (regex.test(input.value)) {
+    if(input.classList.contains("CTA__input--error")){
+      input.classList.remove("CTA__input--error")
+      mssg.style.display = "none";
+    }
+    alert("Your email has been submitted")
+    input.value = ""
+  } else {
+    input.classList.add("CTA__input--error");
+    mssg.style.display = "block";
+  }
 };
