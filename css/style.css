@@ -477,6 +477,10 @@ header {
   .questions__line-break:nth-child(3) {
     display: block; } }
 
+.question__close {
+  display: none;
+  transform: rotate(180deg); }
+
 .CTA {
   padding-top: 4.05556rem;
   padding-bottom: 3.33333rem;
