@@ -20,7 +20,7 @@ ul {
 a {
   text-decoration: none; }
   a:hover {
-    color: #fa5757; }
+    color: #fa5757 !important; }
 
 h1, h2, h6 {
   font-weight: 500; }

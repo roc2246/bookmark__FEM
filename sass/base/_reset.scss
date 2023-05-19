@@ -14,7 +14,7 @@ ul{
 a {
     text-decoration: none;
     &:hover{
-        color: map-get($map: $colors-primary, $key: "soft red");
+        color: map-get($map: $colors-primary, $key: "soft red")  !important;
     }
 }
 
