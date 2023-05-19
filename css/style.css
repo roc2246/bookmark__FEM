@@ -514,6 +514,7 @@ header {
     z-index: 0;
     width: 100%;
     background-color: #fa5757;
+    display: none;
     margin-top: -1rem;
     border-bottom-left-radius: 0.55556rem;
     border-bottom-right-radius: 0.55556rem; }
