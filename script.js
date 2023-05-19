@@ -86,3 +86,28 @@ screen.orientation.addEventListener("change", (event) => {
     links.classList.remove("nav--top");
   }
 });
+
+
+const toggle2 = {
+  block: (block) => document.getElementsByClassName(`${block}__toggle`)[0],
+  icon: (block, img) => document.getElementsByClassName(`${block}__${img}`)[0],
+  paragraph: (block, no) => document.getElementsByClassName(`${block}__answer`)[no],
+  logic: function (no) {
+    if (this.paragraph("question", no).style.display === "" || 
+    this.paragraph("question", no).style.display === "none") {
+      this.paragraph("question", no).style.display = "block"
+    } else {
+      this.paragraph("question", no).style.display = "none"
+    }
+  },
+}
+
+
+ const questions = document.getElementsByClassName("question")
+Object.keys(questions).forEach((question)=>{
+  questions[question].onclick = () =>{
+    toggle2.logic(question)
+  }
+})
+
+
