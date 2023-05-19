@@ -138,6 +138,13 @@ aside {
   margin-right: auto;
   text-align: center; }
 
+.CTA__error > p {
+  margin: 0;
+  color: white;
+  font-style: italic;
+  font-size: 0.66667rem;
+  margin-left: 1rem; }
+
 .btn {
   color: white;
   font-weight: 600;
@@ -494,6 +501,14 @@ header {
   color: white; }
   .CTA__input {
     width: 16.66667rem; }
+    .CTA__input---error {
+      background-image: url(../images/icon-error.svg);
+      border: solid;
+      border-color: #fa5757; }
+  .CTA__error {
+    width: 18.88889rem;
+    background-color: #fa5757;
+    margin-top: -1rem; }
   .CTA__btn {
     width: 18.88889rem; }
 

@@ -7,17 +7,28 @@
   background-color: map-get($map: $colors-primary, $key: "soft blue");
   color: white;
 
-  &__input{
+  &__input {
     width: rem(300px);
+    &---error {
+      background-image: url(../images/icon-error.svg);
+    border: solid;
+    border-color: map-get($map: $colors-primary, $key: "soft red");
+    }
   }
-  &__btn{
+  &__error {
+    width: rem(340px);
+    background-color: map-get($map: $colors-primary, $key: "soft red");
+    // display: none;
+    margin-top: -1rem;
+  }
+  &__btn {
     width: rem(340px);
   }
 }
 
 @media (min-width: 500px) {
-  .CTA{
-    &__btn{
+  .CTA {
+    &__btn {
       width: unset;
     }
   }

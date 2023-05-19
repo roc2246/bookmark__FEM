@@ -136,4 +136,11 @@ aside {
       text-align: center;
     }
   }
+  &__error > p{
+    margin: 0;
+    color: white;
+    font-style: italic;
+    font-size: rem(12px);
+    margin-left: 1rem;
+  }
 }
