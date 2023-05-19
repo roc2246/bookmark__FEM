@@ -428,6 +428,7 @@ header {
   color: #9194a1;
   min-width: 13.36111rem; }
   .tab__border {
+    box-sizing: border-box;
     display: block;
     margin-left: auto;
     margin-right: auto;

@@ -24,6 +24,7 @@
   color: map-get($map: $colors-secondary, $key: "grayish blue");
   min-width: rem(240.5px);
   &__border {
+    box-sizing:border-box;
     display: block;
     margin-left: auto;
     margin-right: auto;

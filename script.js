@@ -121,14 +121,64 @@ const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 document.getElementsByClassName("CTA__btn")[0].onclick = (e) => {
   e.preventDefault();
   if (regex.test(input.value)) {
-    if(input.classList.contains("CTA__input--error")){
-      input.classList.remove("CTA__input--error")
+    if (input.classList.contains("CTA__input--error")) {
+      input.classList.remove("CTA__input--error");
       mssg.style.display = "none";
     }
-    alert("Your email has been submitted")
-    input.value = ""
+    alert("Your email has been submitted");
+    input.value = "";
   } else {
     input.classList.add("CTA__input--error");
     mssg.style.display = "block";
   }
 };
+
+const tabImg = document.getElementsByClassName("illustration__img")[1]
+console.log(tabImg)
+let tabImgs = (no) => `./images/illustration-features-tab-${no}.svg`;
+
+const tabImgNames = [
+  "bookmark illustration",
+  "search illustration",
+  "sharing illustration"
+]
+
+const tabHeadings = [
+  "Bookmark in one click",
+  "Intelligent search",
+  "Share your bookmarks",
+];
+
+const tabParagraphs = [
+  `Organize your bookmarks however 
+  you like. Our simple drag-and-drop 
+  interface gives you complete control
+   over how you manage your favourite 
+   sites.`,
+  ` Our powerful search feature will help you find
+  saved sites in no time at all. No need to trawl through all of your
+  bookmarks.`,
+  `Easily share your bookmarks and
+  collections with others. Create a shareable link that you can send at the
+  click of a button.`,
+];
+
+const heading = document.getElementsByClassName("selection__heading")[0];
+const paragraph = document.getElementsByClassName("selection__paragraph")[0];
+
+const tab = document.getElementsByClassName("tab");
+
+for (let selection in tab) {
+  tab[selection].onclick = () => {
+    for (let x = 0; x<tab.length; x++) {
+      if (tab[x].classList.contains("tab--selected")) {
+        tab[x].classList.remove("tab--selected");
+      }
+    }
+    tab[selection].classList.add("tab--selected")
+    tabImg.src = tabImgs(parseInt(selection) + 1);
+    tabImg.alt = tabImgNames[selection];
+    heading.innerHTML = tabHeadings[selection];
+    paragraph.innerHTML = tabParagraphs[selection];
+  };
+}
