@@ -25,6 +25,12 @@
 }
 
 .question {
+  &__topic{
+    cursor: pointer;
+    &:hover{
+      color: map-get($map: $colors-primary, $key: "soft red");
+    }
+  }
   &__close {
     display: none;
     transform: rotate(180deg);

@@ -477,6 +477,11 @@ header {
   .questions__line-break:nth-child(3) {
     display: block; } }
 
+.question__topic {
+  cursor: pointer; }
+  .question__topic:hover {
+    color: #fa5757; }
+
 .question__close {
   display: none;
   transform: rotate(180deg); }
