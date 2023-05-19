@@ -90,14 +90,18 @@ screen.orientation.addEventListener("change", (event) => {
 
 const toggle2 = {
   block: (block) => document.getElementsByClassName(`${block}__toggle`)[0],
-  icon: (block, img) => document.getElementsByClassName(`${block}__${img}`)[0],
+  icon: (block, img) => document.getElementsByClassName(`${block}__${img}`),
   paragraph: (block, no) => document.getElementsByClassName(`${block}__answer`)[no],
   logic: function (no) {
     if (this.paragraph("question", no).style.display === "" || 
     this.paragraph("question", no).style.display === "none") {
       this.paragraph("question", no).style.display = "block"
+      this.icon("question", "open")[no].style.display = "none"
+      this.icon("question", "close")[no].style.display = "inline"
     } else {
       this.paragraph("question", no).style.display = "none"
+      this.icon("question", "open")[no].style.display = "inline"
+      this.icon("question", "close")[no].style.display = "none"
     }
   },
 }
