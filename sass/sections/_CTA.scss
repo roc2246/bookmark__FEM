@@ -9,20 +9,28 @@
 
   &__input {
     width: rem(300px);
-    &---error {
+    z-index: 1;
+    &--error {
       background-image: url(../images/icon-error.svg);
-    border: solid;
-    border-color: map-get($map: $colors-primary, $key: "soft red");
+      background-repeat: no-repeat;
+      background-position-x: rem(295px);
+      background-position-y: rem(14px);
+      border: solid;
+      border-color: map-get($map: $colors-primary, $key: "soft red");
     }
   }
   &__error {
-    width: rem(340px);
+    z-index: 0;
+    width:100%;
     background-color: map-get($map: $colors-primary, $key: "soft red");
     // display: none;
     margin-top: -1rem;
+    border-bottom-left-radius: rem(10px);
+    border-bottom-right-radius: rem(10px);
   }
   &__btn {
     width: rem(340px);
+    height: rem(51px);
   }
 }
 

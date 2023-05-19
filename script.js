@@ -114,3 +114,9 @@ Object.keys(questions).forEach((question) => {
     toggle2.logic(question);
   };
 });
+
+const input = document.getElementsByClassName("CTA__input")[0];
+document.getElementsByClassName("CTA__btn")[0].onclick = (e) => {
+  e.preventDefault();
+  input.classList.add("CTA__input--error");
+};

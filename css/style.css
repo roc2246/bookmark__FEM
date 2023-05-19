@@ -143,7 +143,8 @@ aside {
   color: white;
   font-style: italic;
   font-size: 0.66667rem;
-  margin-left: 1rem; }
+  margin-left: 1rem;
+  padding-top: 1rem; }
 
 .btn {
   color: white;
@@ -500,17 +501,25 @@ header {
   background-color: #5368df;
   color: white; }
   .CTA__input {
-    width: 16.66667rem; }
-    .CTA__input---error {
+    width: 16.66667rem;
+    z-index: 1; }
+    .CTA__input--error {
       background-image: url(../images/icon-error.svg);
+      background-repeat: no-repeat;
+      background-position-x: 16.38889rem;
+      background-position-y: 0.77778rem;
       border: solid;
       border-color: #fa5757; }
   .CTA__error {
-    width: 18.88889rem;
+    z-index: 0;
+    width: 100%;
     background-color: #fa5757;
-    margin-top: -1rem; }
+    margin-top: -1rem;
+    border-bottom-left-radius: 0.55556rem;
+    border-bottom-right-radius: 0.55556rem; }
   .CTA__btn {
-    width: 18.88889rem; }
+    width: 18.88889rem;
+    height: 2.83333rem; }
 
 @media (min-width: 500px) {
   .CTA__btn {
