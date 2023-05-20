@@ -1,11 +1,9 @@
 let navMode = "desktop";
-
 const navToggle = {
   hero: document.getElementsByClassName("hero")[0],
   btn: document.getElementsByClassName("nav__btn")[0],
   links: document.getElementsByClassName("nav")[0],
-  logo: (mode) =>
-  document.getElementsByClassName(`bookmark-logo-${mode}`)[0],
+  logo: (mode) => document.getElementsByClassName(`bookmark-logo-${mode}`)[0],
   block: (block, ele) => document.getElementsByClassName(`${block}__${ele}`)[0],
   switchIcon: function (block, hide, show) {
     if (block !== null) {
@@ -55,13 +53,12 @@ const navToggle = {
     });
   },
 };
-
 navToggle.block("nav", "toggle").onclick = () => navToggle.logic();
 navToggle.keepMobileNav(window, "resize");
 navToggle.keepMobileNav(screen.orientation, "change");
 
-
 const qnToggle = {
+  questions: document.getElementsByClassName("question"),
   block: (block) => document.getElementsByClassName(`${block}__toggle`)[0],
   icon: (block, img) => document.getElementsByClassName(`${block}__${img}`),
   paragraph: (block, no) =>
@@ -81,29 +78,26 @@ const qnToggle = {
     }
   },
 };
-
-const questions = document.getElementsByClassName("question");
-Object.keys(questions).forEach((question) => {
-  questions[question].onclick = () => {
+Object.keys(qnToggle.questions).forEach((question) => {
+  qnToggle.questions[question].onclick = () => {
     qnToggle.logic(question);
   };
 });
 
-const input = document.getElementsByClassName("CTA__input")[0];
-const mssg = document.getElementsByClassName("CTA__error")[0];
-const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-document.getElementsByClassName("CTA__btn")[0].onclick = (e) => {
+const CTAblock = (ele) => document.getElementsByClassName(`CTA__${ele}`)[0];
+const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+CTAblock("btn").onclick = (e) => {
   e.preventDefault();
-  if (regex.test(input.value)) {
-    if (input.classList.contains("CTA__input--error")) {
-      input.classList.remove("CTA__input--error");
-      mssg.style.display = "none";
+  if (emailRegex.test(CTAblock("input").value)) {
+    if (CTAblock("input").classList.contains("CTA__input--error")) {
+      CTAblock("input").classList.remove("CTA__input--error");
+      CTAblock("error").style.display = "none";
     }
     alert("Your email has been submitted");
-    input.value = "";
+    CTAblock("input").value = "";
   } else {
-    input.classList.add("CTA__input--error");
-    mssg.style.display = "block";
+    CTAblock("input").classList.add("CTA__input--error");
+    CTAblock("error").style.display = "block";
   }
 };
 
