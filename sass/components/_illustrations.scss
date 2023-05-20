@@ -2,14 +2,13 @@ $border-radius: rem(400px);
 
 .illustration {
   &__background {
-
     height: #{"max(#{rem(201px)}, 23.75vw)"};
     width: 100%;
 
     background-color: map-get($map: $colors-primary, $key: "soft blue");
   }
 
-  &--hero{
+  &--hero {
     margin-left: auto;
   }
 
@@ -17,25 +16,33 @@ $border-radius: rem(400px);
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
     margin-left: auto;
-
   }
   &--hero > &__img {
     aspect-ratio: 580/386;
     width: #{"max(#{rem(310px)}, 40vw)"};
     margin-left: auto;
-  } 
+  }
 
-  &--selection{
+  &--selection {
     margin-right: auto;
   }
-  
+
   &--selection > &__background {
     border-top-right-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
   }
   &--selection > &__img {
-    aspect-ratio: 379/245;
-    width: #{"max(#{rem(310px)}, 37vw)"};
-
+    &--bookmark {
+      width: #{"max(#{rem(310px)}, 37vw)"};
+      aspect-ratio: 379/245;
+    }
+    &--search {
+      width: #{"max(#{rem(310px)}, 32.91vw)"};
+      aspect-ratio: 478/416;
+    }
+    &--sharing {
+      width: #{"max(#{rem(310px)}, 30.34vw)"};
+      aspect-ratio: 420/380;
+    }
   }
 }

@@ -133,15 +133,10 @@ document.getElementsByClassName("CTA__btn")[0].onclick = (e) => {
   }
 };
 
-const tabImg = document.getElementsByClassName("illustration__img")[1]
-console.log(tabImg)
+const tabImg = document.getElementsByClassName("illustration__img")[1];
 let tabImgs = (no) => `./images/illustration-features-tab-${no}.svg`;
 
-const tabImgNames = [
-  "bookmark illustration",
-  "search illustration",
-  "sharing illustration"
-]
+const tabImgNames = ["bookmark", "search", "sharing"];
 
 const tabHeadings = [
   "Bookmark in one click",
@@ -170,14 +165,19 @@ const tab = document.getElementsByClassName("tab");
 
 for (let selection in tab) {
   tab[selection].onclick = () => {
-    for (let x = 0; x<tab.length; x++) {
+    for (let x = 0; x < tab.length; x++) {
       if (tab[x].classList.contains("tab--selected")) {
         tab[x].classList.remove("tab--selected");
       }
     }
-    tab[selection].classList.add("tab--selected")
+    for (let y = 0; y < tabImgNames.length; y++)
+      if (tabImg.classList.contains(`illustration__img--${tabImgNames[y]}`)) {
+        tabImg.classList.remove(`illustration__img--${tabImgNames[y]}`);
+      }
+    tab[selection].classList.add("tab--selected");
     tabImg.src = tabImgs(parseInt(selection) + 1);
-    tabImg.alt = tabImgNames[selection];
+    tabImg.alt = `${tabImgNames[selection]} illustration`;
+    tabImg.classList.add(`illustration__img--${tabImgNames[selection]}`);
     heading.innerHTML = tabHeadings[selection];
     paragraph.innerHTML = tabParagraphs[selection];
   };

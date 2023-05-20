@@ -206,9 +206,17 @@ aside {
   border-top-right-radius: 22.22222rem;
   border-bottom-right-radius: 22.22222rem; }
 
-.illustration--selection > .illustration__img {
-  aspect-ratio: 379/245;
-  width: max(17.22222rem, 37vw); }
+.illustration--selection > .illustration__img--bookmark {
+  width: max(17.22222rem, 37vw);
+  aspect-ratio: 379/245; }
+
+.illustration--selection > .illustration__img--search {
+  width: max(17.22222rem, 32.91vw);
+  aspect-ratio: 478/416; }
+
+.illustration--selection > .illustration__img--sharing {
+  width: max(17.22222rem, 30.34vw);
+  aspect-ratio: 420/380; }
 
 .line-break--dotted {
   background-image: linear-gradient(to right, #9194a1 10%, rgba(255, 255, 255, 0) 0%);
