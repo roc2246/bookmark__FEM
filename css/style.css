@@ -183,7 +183,7 @@ aside {
 
 .illustration__background {
   height: max(11.16667rem, 23.75vw);
-  width: 100%;
+  width: max(18.33333rem, 42.75vw);
   background-color: #5368df; }
 
 .illustration--hero {
@@ -211,11 +211,15 @@ aside {
   aspect-ratio: 379/245; }
 
 .illustration--selection > .illustration__img--search {
-  width: max(17.22222rem, 32.91vw);
+  width: max(13.88889rem, 32.91vw);
+  margin-left: 3rem;
+  margin-top: -2rem;
   aspect-ratio: 478/416; }
 
 .illustration--selection > .illustration__img--sharing {
-  width: max(17.22222rem, 30.34vw);
+  width: max(13.88889rem, 32.91vw);
+  margin-left: 3rem;
+  margin-top: -2rem;
   aspect-ratio: 420/380; }
 
 .line-break--dotted {

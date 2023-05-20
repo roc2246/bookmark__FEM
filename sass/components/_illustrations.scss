@@ -3,7 +3,7 @@ $border-radius: rem(400px);
 .illustration {
   &__background {
     height: #{"max(#{rem(201px)}, 23.75vw)"};
-    width: 100%;
+    width: #{"max(#{rem(330px)}, 42.75vw)"};
 
     background-color: map-get($map: $colors-primary, $key: "soft blue");
   }
@@ -37,11 +37,15 @@ $border-radius: rem(400px);
       aspect-ratio: 379/245;
     }
     &--search {
-      width: #{"max(#{rem(310px)}, 32.91vw)"};
+      width: #{"max(#{rem(250px)}, 32.91vw)"};
+      margin-left: 3rem;
+      margin-top: -2rem;
       aspect-ratio: 478/416;
     }
     &--sharing {
-      width: #{"max(#{rem(310px)}, 30.34vw)"};
+      width: #{"max(#{rem(250px)}, 32.91vw)"};
+      margin-left: 3rem;
+      margin-top: -2rem;
       aspect-ratio: 420/380;
     }
   }
