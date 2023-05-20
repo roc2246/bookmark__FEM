@@ -7,12 +7,11 @@ const hero = document.getElementsByClassName("hero")[0];
 const btn = document.getElementsByClassName("nav__btn")[0];
 
 const navToggle = {
-  block: (block) => document.getElementsByClassName(`${block}__toggle`)[0],
-  icon: (block, img) => document.getElementsByClassName(`${block}__${img}`)[0],
+  block: (block, ele) => document.getElementsByClassName(`${block}__${ele}`)[0],
   switchIcon: function (block, hide, show) {
     if (block !== null) {
-      this.icon(block, hide).style.display = "none";
-      this.icon(block, show).style.display = "inline";
+      this.block(block, hide).style.display = "none";
+      this.block(block, show).style.display = "inline";
     } else {
       logo(hide).style.display = "none";
       logo(show).style.display = "inline";
@@ -47,29 +46,27 @@ const navToggle = {
   },
 };
 
-navToggle.block("nav").onclick = () => navToggle.logic();
+navToggle.block("nav", "toggle").onclick = () => navToggle.logic();
 
 window.onresize = (event) => {
-  if (event.target.innerWidth >= 675 && navMode === "mobile") {
+  if (event.target.outerWidth >= 675 && navMode === "mobile") {
     hero.style.marginTop = "max(4.72222rem, 3.5vh)";
     navToggle.close(navToggle);
-  } else if (event.target.innerWidth < 675 && navMode === "mobile") {
+  } else if (event.target.outerWidth < 675 && navMode === "mobile") {
     hero.style.marginTop = "max(150px, 7vh)";
     navToggle.open(navToggle);
   }
 };
 
 screen.orientation.addEventListener("change", (event) => {
-  if (event.target.innerWidth >= 675 && navMode === "mobile") {
+  if (event.target.outerWidth >= 675 && navMode === "mobile") {
     hero.style.marginTop = "max(4.72222rem, 3.5vh)";
     navToggle.close(navToggle);
-  } else if (event.target.innerWidth < 675 && navMode === "mobile") {
+  } else if (event.target.outerWidth < 675 && navMode === "mobile") {
     hero.style.marginTop = "max(150px, 7vh)";
     navToggle.open(navToggle);
   }
 });
-
-
 
 const qnToggle = {
   block: (block) => document.getElementsByClassName(`${block}__toggle`)[0],
@@ -98,8 +95,6 @@ Object.keys(questions).forEach((question) => {
     qnToggle.logic(question);
   };
 });
-
-
 
 const input = document.getElementsByClassName("CTA__input")[0];
 const mssg = document.getElementsByClassName("CTA__error")[0];
@@ -137,10 +132,12 @@ const tabParagraphs = [
    over how you manage your favourite 
    sites.`,
   ` Our powerful search feature will help you find
-  saved sites in no time at all. No need to trawl through all of your
+  saved sites in no time at all. No need to trawl 
+  through all of your
   bookmarks.`,
   `Easily share your bookmarks and
-  collections with others. Create a shareable link that you can send at the
+  collections with others. Create a shareable link 
+  that you can send at the
   click of a button.`,
 ];
 
