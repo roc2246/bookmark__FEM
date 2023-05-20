@@ -6,88 +6,72 @@ const logo = (mode) =>
 const hero = document.getElementsByClassName("hero")[0];
 const btn = document.getElementsByClassName("nav__btn")[0];
 
-const toggle = {
+const navToggle = {
   block: (block) => document.getElementsByClassName(`${block}__toggle`)[0],
   icon: (block, img) => document.getElementsByClassName(`${block}__${img}`)[0],
+  switchIcon: function (block, hide, show) {
+    if (block !== null) {
+      this.icon(block, hide).style.display = "none";
+      this.icon(block, show).style.display = "inline";
+    } else {
+      logo(hide).style.display = "none";
+      logo(show).style.display = "inline";
+    }
+  },
+  switchClass: function (container, ele, newMod, prevMod) {
+    container.classList.add(`${ele}--${newMod}`);
+    container.classList.remove(`${ele}--${prevMod}`);
+  },
+  open: function (source) {
+    source.switchIcon("nav", "open", "close");
+    source.switchIcon(null, "regular", "white");
+    source.switchClass(btn, "btn", "transparent", "red");
+    source.switchClass(links, "nav", "mobile", "top");
+  },
+  close: function (source) {
+    source.switchIcon("nav", "close", "open");
+    source.switchIcon(null, "white", "regular");
+    source.switchClass(btn, "btn", "red", "transparent");
+    source.switchClass(links, "nav", "top", "mobile");
+  },
   logic: function () {
     if (!links.classList.contains("nav--mobile")) {
       navMode = "mobile";
-      this.icon("nav", "open").style.display = "none";
-      this.icon("nav", "close").style.display = "inline";
-      logo("regular").style.display = "none";
-      logo("white").style.display = "inline";
       hero.style.marginTop = "max(150px, 7vh)";
-      btn.classList.add("btn--transparent");
-      btn.classList.remove("btn--red");
-      links.classList.add("nav--mobile");
-      links.classList.remove("nav--top");
+      this.open(this);
     } else {
       navMode = "desktop";
-      this.icon("nav", "open").style.display = "inline";
-      this.icon("nav", "close").style.display = "none";
-      logo("regular").style.display = "inline";
-      logo("white").style.display = "none";
       hero.style.marginTop = "max(4.72222rem, 3.5vh)";
-      btn.classList.add("btn--red");
-      btn.classList.remove("btn--transparent");
-      links.classList.add("nav--top");
-      links.classList.remove("nav--mobile");
+      this.close(this);
     }
   },
 };
 
-toggle.block("nav").onclick = () => toggle.logic();
+navToggle.block("nav").onclick = () => navToggle.logic();
 
 window.onresize = (event) => {
   if (event.target.innerWidth >= 675 && navMode === "mobile") {
-    toggle.icon("nav", "open").style.display = "inline";
-    toggle.icon("nav", "close").style.display = "none";
-    logo("regular").style.display = "inline";
-    logo("white").style.display = "none";
     hero.style.marginTop = "max(4.72222rem, 3.5vh)";
-    btn.classList.add("btn--red");
-    btn.classList.remove("btn--transparent");
-    links.classList.add("nav--top");
-    links.classList.add("nav--top");
-    links.classList.remove("nav--mobile");
+    navToggle.close(navToggle);
   } else if (event.target.innerWidth < 675 && navMode === "mobile") {
-    toggle.icon("nav", "open").style.display = "none";
-    toggle.icon("nav", "close").style.display = "inline";
-    logo("regular").style.display = "none";
-    logo("white").style.display = "inline";
     hero.style.marginTop = "max(150px, 7vh)";
-    btn.classList.add("btn--transparent");
-    btn.classList.remove("btn--red");
-    links.classList.add("nav--mobile");
-    links.classList.remove("nav--top");
+    navToggle.open(navToggle);
   }
 };
 
 screen.orientation.addEventListener("change", (event) => {
   if (event.target.innerWidth >= 675 && navMode === "mobile") {
-    toggle.icon("nav", "open").style.display = "inline";
-    toggle.icon("nav", "close").style.display = "none";
-    logo("regular").style.display = "inline";
-    logo("white").style.display = "none";
     hero.style.marginTop = "max(4.72222rem, 3.5vh)";
-    btn.classList.add("btn--transparent");
-    btn.classList.remove("btn--red");
-    links.classList.add("nav--top");
-    links.classList.remove("nav--mobile");
+    navToggle.close(navToggle);
   } else if (event.target.innerWidth < 675 && navMode === "mobile") {
-    toggle.icon("nav", "open").style.display = "none";
-    toggle.icon("nav", "close").style.display = "inline";
-    logo("regular").style.display = "none";
-    logo("white").style.display = "inline";
     hero.style.marginTop = "max(150px, 7vh)";
-    btn.classList.add("btn--red");
-    btn.classList.remove("btn--transparent");
-    links.classList.add("nav--mobile");
-    links.classList.remove("nav--top");
+    navToggle.open(navToggle);
   }
 });
 
-const toggle2 = {
+
+
+const qnToggle = {
   block: (block) => document.getElementsByClassName(`${block}__toggle`)[0],
   icon: (block, img) => document.getElementsByClassName(`${block}__${img}`),
   paragraph: (block, no) =>
@@ -111,9 +95,11 @@ const toggle2 = {
 const questions = document.getElementsByClassName("question");
 Object.keys(questions).forEach((question) => {
   questions[question].onclick = () => {
-    toggle2.logic(question);
+    qnToggle.logic(question);
   };
 });
+
+
 
 const input = document.getElementsByClassName("CTA__input")[0];
 const mssg = document.getElementsByClassName("CTA__error")[0];
