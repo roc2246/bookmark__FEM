@@ -93,7 +93,7 @@ CTAblock("btn").onclick = (e) => {
       CTAblock("input").classList.remove("CTA__input--error");
       CTAblock("error").style.display = "none";
     }
-    alert("Your email has been submitted");
+    alert("Success!");
     CTAblock("input").value = "";
   } else {
     CTAblock("input").classList.add("CTA__input--error");
