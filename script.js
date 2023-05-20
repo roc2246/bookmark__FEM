@@ -101,54 +101,61 @@ CTAblock("btn").onclick = (e) => {
   }
 };
 
-const tabImg = document.getElementsByClassName("illustration__img")[1];
-let tabImgs = (no) => `./images/illustration-features-tab-${no}.svg`;
-
-const tabImgNames = ["bookmark", "search", "sharing"];
-
-const tabHeadings = [
-  "Bookmark in one click",
-  "Intelligent search",
-  "Share your bookmarks",
-];
-
-const tabParagraphs = [
-  `Organize your bookmarks however 
+const tabs = {
+  mainCtr: document.getElementsByClassName("tab"),
+  img: document.getElementsByClassName("illustration__img")[1],
+  imgURL: (no) => `./images/illustration-features-tab-${no}.svg`,
+  textCtr: (ele) => document.getElementsByClassName(`selection__${ele}`)[0],
+  names: ["bookmark", "search", "sharing"],
+  headings: [
+    "Bookmark in one click",
+    "Intelligent search",
+    "Share your bookmarks",
+  ],
+  paragraphs: [
+    `Organize your bookmarks however 
   you like. Our simple drag-and-drop 
   interface gives you complete control
    over how you manage your favourite 
    sites.`,
-  ` Our powerful search feature will help you find
+    `Our powerful search feature will help you find
   saved sites in no time at all. No need to trawl 
   through all of your
   bookmarks.`,
-  `Easily share your bookmarks and
+    `Easily share your bookmarks and
   collections with others. Create a shareable link 
   that you can send at the
   click of a button.`,
-];
-
-const heading = document.getElementsByClassName("selection__heading")[0];
-const paragraph = document.getElementsByClassName("selection__paragraph")[0];
-
-const tab = document.getElementsByClassName("tab");
-
-for (let selection in tab) {
-  tab[selection].onclick = () => {
-    for (let x = 0; x < tab.length; x++) {
-      if (tab[x].classList.contains("tab--selected")) {
-        tab[x].classList.remove("tab--selected");
+  ],
+  removeSelected: function () {
+    for (let x = 0; x < this.mainCtr.length; x++) {
+      if (this.mainCtr[x].classList.contains("tab--selected")) {
+        this.mainCtr[x].classList.remove("tab--selected");
       }
     }
-    for (let y = 0; y < tabImgNames.length; y++)
-      if (tabImg.classList.contains(`illustration__img--${tabImgNames[y]}`)) {
-        tabImg.classList.remove(`illustration__img--${tabImgNames[y]}`);
+  },
+  removeImgStyle: function () {
+    for (let y = 0; y < this.names.length; y++)
+      if (this.img.classList.contains(`illustration__img--${this.names[y]}`)) {
+        this.img.classList.remove(`illustration__img--${this.names[y]}`);
       }
-    tab[selection].classList.add("tab--selected");
-    tabImg.src = tabImgs(parseInt(selection) + 1);
-    tabImg.alt = `${tabImgNames[selection]} illustration`;
-    tabImg.classList.add(`illustration__img--${tabImgNames[selection]}`);
-    heading.innerHTML = tabHeadings[selection];
-    paragraph.innerHTML = tabParagraphs[selection];
+  },
+  setImg: function (selection) {
+    this.img.src = this.imgURL(parseInt(selection) + 1);
+    this.img.alt = `${this.names[selection]} illustration`;
+    this.img.classList.add(`illustration__img--${this.names[selection]}`);
+  },
+  setTxt: function (selection) {
+    this.textCtr("heading").innerHTML = this.headings[selection];
+    this.textCtr("paragraph").innerHTML = this.paragraphs[selection];
+  },
+};
+for (let selection in tabs.mainCtr) {
+  tabs.mainCtr[selection].onclick = () => {
+    tabs.removeSelected();
+    tabs.removeImgStyle();
+    tabs.mainCtr[selection].classList.add("tab--selected");
+    tabs.setImg(selection);
+    tabs.setTxt(selection);
   };
 }
