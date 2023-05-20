@@ -1,72 +1,65 @@
 let navMode = "desktop";
 
-const links = document.getElementsByClassName("nav")[0];
-const logo = (mode) =>
-  document.getElementsByClassName(`bookmark-logo-${mode}`)[0];
-const hero = document.getElementsByClassName("hero")[0];
-const btn = document.getElementsByClassName("nav__btn")[0];
-
 const navToggle = {
+  hero: document.getElementsByClassName("hero")[0],
+  btn: document.getElementsByClassName("nav__btn")[0],
+  links: document.getElementsByClassName("nav")[0],
+  logo: (mode) =>
+  document.getElementsByClassName(`bookmark-logo-${mode}`)[0],
   block: (block, ele) => document.getElementsByClassName(`${block}__${ele}`)[0],
   switchIcon: function (block, hide, show) {
     if (block !== null) {
       this.block(block, hide).style.display = "none";
       this.block(block, show).style.display = "inline";
     } else {
-      logo(hide).style.display = "none";
-      logo(show).style.display = "inline";
+      this.logo(hide).style.display = "none";
+      this.logo(show).style.display = "inline";
     }
   },
   switchClass: function (container, ele, newMod, prevMod) {
     container.classList.add(`${ele}--${newMod}`);
     container.classList.remove(`${ele}--${prevMod}`);
   },
-  open: function (source) {
-    source.switchIcon("nav", "open", "close");
-    source.switchIcon(null, "regular", "white");
-    source.switchClass(btn, "btn", "transparent", "red");
-    source.switchClass(links, "nav", "mobile", "top");
+  open: function () {
+    this.switchIcon("nav", "open", "close");
+    this.switchIcon(null, "regular", "white");
+    this.switchClass(this.btn, "btn", "transparent", "red");
+    this.switchClass(this.links, "nav", "mobile", "top");
   },
-  close: function (source) {
-    source.switchIcon("nav", "close", "open");
-    source.switchIcon(null, "white", "regular");
-    source.switchClass(btn, "btn", "red", "transparent");
-    source.switchClass(links, "nav", "top", "mobile");
+  close: function () {
+    this.switchIcon("nav", "close", "open");
+    this.switchIcon(null, "white", "regular");
+    this.switchClass(this.btn, "btn", "red", "transparent");
+    this.switchClass(this.links, "nav", "top", "mobile");
   },
   logic: function () {
-    if (!links.classList.contains("nav--mobile")) {
+    if (!this.links.classList.contains("nav--mobile")) {
       navMode = "mobile";
-      hero.style.marginTop = "max(150px, 7vh)";
-      this.open(this);
+      this.hero.style.marginTop = "max(150px, 7vh)";
+      this.open();
     } else {
       navMode = "desktop";
-      hero.style.marginTop = "max(4.72222rem, 3.5vh)";
-      this.close(this);
+      this.hero.style.marginTop = "max(4.72222rem, 3.5vh)";
+      this.close();
     }
+  },
+  keepMobileNav: function (object, action) {
+    object.addEventListener(action, (event) => {
+      if (event.target.outerWidth >= 675 && navMode === "mobile") {
+        this.hero.style.marginTop = "max(4.72222rem, 3.5vh)";
+        this.close();
+      } else if (event.target.outerWidth < 675 && navMode === "mobile") {
+        this.hero.style.marginTop = "max(150px, 7vh)";
+        this.open();
+      }
+    });
   },
 };
 
 navToggle.block("nav", "toggle").onclick = () => navToggle.logic();
+navToggle.keepMobileNav(window, "resize");
+navToggle.keepMobileNav(screen.orientation, "change");
 
-window.onresize = (event) => {
-  if (event.target.outerWidth >= 675 && navMode === "mobile") {
-    hero.style.marginTop = "max(4.72222rem, 3.5vh)";
-    navToggle.close(navToggle);
-  } else if (event.target.outerWidth < 675 && navMode === "mobile") {
-    hero.style.marginTop = "max(150px, 7vh)";
-    navToggle.open(navToggle);
-  }
-};
-
-screen.orientation.addEventListener("change", (event) => {
-  if (event.target.outerWidth >= 675 && navMode === "mobile") {
-    hero.style.marginTop = "max(4.72222rem, 3.5vh)";
-    navToggle.close(navToggle);
-  } else if (event.target.outerWidth < 675 && navMode === "mobile") {
-    hero.style.marginTop = "max(150px, 7vh)";
-    navToggle.open(navToggle);
-  }
-});
 
 const qnToggle = {
   block: (block) => document.getElementsByClassName(`${block}__toggle`)[0],
